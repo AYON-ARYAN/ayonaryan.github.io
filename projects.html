@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Ayon Aryan</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_projects.css">
 </head>
 <body>
 
@@ -16,32 +16,83 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><button id="dark-mode-toggle">🌙</button></li>
             </ul>
         </div>
     </nav>
 
     <section class="projects">
-        <h2>My Projects</h2>
-        <div class="project-grid">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-grid">
 
-            <div class="project">
-                <h3>💬 LLM-Based Chatbot</h3>
-                <p>Built a custom **GPT-2 level chatbot** using **Python & PyTorch**.</p>
-                <p><strong>Technologies:</strong> TensorFlow, Transformer Architecture</p>
+                <!-- LLM Chatbot -->
+                <div class="project">
+                    <img src="assets/project1.jpeg" alt="LLM Chatbot">
+                    <h3>💬 LLM-Based Chatbot</h3>
+                    <p>Built a GPT-2 level chatbot using Python & PyTorch.</p>
+                    <p><strong>Technologies:</strong> TensorFlow, Transformer Architecture</p>
+                </div>
+
+                <!-- Blockchain Voting System -->
+                <div class="project">
+                    <img src="assets/project2.jpeg" alt="Blockchain Voting">
+                    <h3>📱 Android Voting System</h3>
+                    <p>Developed a secure voting system on Blockchain using Solidity.</p>
+                    <p><strong>Technologies:</strong> Solidity, Hardhat, Smart Contracts</p>
+                </div>
+
+                <!-- Movie Recommendation System -->
+                <div class="project">
+                    <img src="assets/project3.png" alt="Movie Recommender">
+                    <h3>🎬 Movie Recommendation System</h3>
+                    <p>Built a content-based movie recommendation system.</p>
+                    <p><strong>Technologies:</strong> Python, Pandas, Machine Learning</p>
+                </div>
+
+                <!-- Skin Cancer Detection -->
+                <div class="project">
+                    <img src="assets/project4.jpeg" alt="Skin Cancer Detection">
+                    <h3>🧬 Skin Cancer Detection</h3>
+                    <p>Developed a CNN-based model to detect skin cancer.</p>
+                    <p><strong>Technologies:</strong> TensorFlow, Deep Learning</p>
+                </div>
+
+             
+
+                <!-- Task Manager in C -->
+                <div class="project">
+                    <img src="assets/project5.png" alt="Task Manager">
+                    <h3>💻 Simple Task Manager (C)</h3>
+                    <p>A CLI-based process manager built in C.</p>
+                    <p><strong>Technologies:</strong> C, Linux System Calls</p>
+                </div>
+
+                <!-- Instagram Clone -->
+                <div class="project">
+                    <img src="assets/project6.jpeg" alt="Instagram Clone">
+                    <h3>📸 Instagram Login Clone</h3>
+                    <p>Built a simple Instagram login page using Android Studio.</p>
+                    <p><strong>Technologies:</strong> Java, Android Studio</p>
+                </div>
+
+                <!-- Glucose Level Detector -->
+                <div class="project">
+                    <img src="assets/project4.jpeg" alt="Glucose Level Detector">
+                    <h3>🩸 Glucose Level Detector</h3>
+                    <p>Designed a non-invasive glucose level detector using saliva samples.</p>
+                    <p><strong>Technologies:</strong> Biomedical Sensors, Data Analysis</p>
+                </div>
+
+                <!-- Smart Door Lock -->
+                <div class="project">
+                    <img src="assets/project8.jpeg" alt="Smart Door Lock">
+                    <h3>🚪 Smart Door Lock (No Microcontroller)</h3>
+                    <p>Created an electronic door lock system without using a microcontroller.</p>
+                    <p><strong>Technologies:</strong> Electronics, Circuit Design</p>
+                </div>
+
             </div>
-
-            <div class="project">
-                <h3>📱 Android Voting System</h3>
-                <p>Created a **secure voting system on Blockchain** using Solidity.</p>
-                <p><strong>Technologies:</strong> Solidity, Hardhat, Smart Contracts</p>
-            </div>
-
-            <div class="project">
-                <h3>🎬 Movie Recommendation System</h3>
-                <p>Developed a **content-based recommendation system** using Scikit-Learn.</p>
-                <p><strong>Technologies:</strong> Python, Pandas, Machine Learning</p>
-            </div>
-
         </div>
     </section>
 
@@ -49,5 +100,6 @@
         <p>© 2025 Ayon Aryan | All Rights Reserved</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
