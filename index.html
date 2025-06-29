@@ -1,55 +1,1240 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayon Aryan | Portfolio</title>
-    <link rel="stylesheet" href="style_index.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Index - SnapFolio Bootstrap Template</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
 
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <h1 class="logo">Ayon Aryan</h1>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><button id="dark-mode-toggle">🌙</button></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="container">
-            <h2>👋 Hi, I'm <span>Ayon Aryan</span></h2>
-            <p>A passionate developer exploring AI, Blockchain, and Full-Stack Development.</p>
-            <a href="resume.html" class="btn">View Resume</a>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: SnapFolio
+  * Template URL: https://bootstrapmade.com/snapfolio-bootstrap-portfolio-template/
+  * Updated: Jun 13 2025 with Bootstrap v5.3.6
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body class="index-page">
+    <header
+      id="header"
+      class="header dark-background d-flex flex-column justify-content-center"
+    >
+      <i class="header-toggle d-xl-none bi bi-list"></i>
+
+      <div class="header-container d-flex flex-column align-items-start">
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li>
+              <a href="#hero" class="active"
+                ><i class="bi bi-house navicon"></i>Home</a
+              >
+            </li>
+            <li>
+              <a href="#about"><i class="bi bi-person navicon"></i> About</a>
+            </li>
+            <li>
+              <a href="#resume"
+                ><i class="bi bi-file-earmark-text navicon"></i> Resume</a
+              >
+            </li>
+            <li>
+              <a href="#portfolio"
+                ><i class="bi bi-images navicon"></i> Portfolio</a
+              >
+            </li>
+            <li>
+              <a href="#services"
+                ><i class="bi bi-hdd-stack navicon"></i> Services</a
+              >
+            </li>
+            <li class="dropdown">
+              <a href="#"
+                ><i class="bi bi-menu-button navicon"></i>
+                <span>Dropdown</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown">
+                  <a href="#"
+                    ><span>Deep Dropdown</span>
+                    <i class="bi bi-chevron-down toggle-dropdown"></i
+                  ></a>
+                  <ul>
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="ayonaryan5@gmail.com"
+                ><i class="bi bi-envelope navicon"></i> Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="social-links text-center">
+
+          <a href="https://www.facebook.com/AYON.ARYAN5" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/ayon_aryan5/" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/ayon-aryan-917078238/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          <a href="https://github.com/AYON-ARYAN" class="github"><i class="bi bi-github"></i></a>
+
         </div>
+      </div>
     </header>
 
-    <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <div class="about-content">
-                <img src="assets/profile.jpeg" alt="Ayon Aryan">
-                <div>
-                    <h2>About Me</h2>
-                    <p>I am a Computer Science Engineering student at RV University, Bangalore. My interests include AI, Blockchain, and Business Intelligence. Currently, I’m interning as a Native Android Developer at Techpuram.</p>
-                    <a href="projects.html" class="btn">View My Projects</a>
-                </div>
-            </div>
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="hero" class="hero section">
+        <div class="background-elements">
+          <div class="bg-circle circle-1"></div>
+          <div class="bg-circle circle-2"></div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Ayon Aryan | All Rights Reserved</p>
+        <div class="hero-content">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                <div class="hero-text">
+                  <h1>Personal <span class="accent-text">Website</span></h1>
+                  <h2>Ayon Aryan</h2>
+                  <p class="lead">
+                    I'm a
+                    <span
+                      class="typed"
+                      data-typed-items="UI/UX Designer, Android Developer, AI Enthusiast,Computer Science Engineer"
+                    ></span>
+                  </p>
+                  <p class="description">
+                    Driven by curiosity and creativity, I craft impactful
+                    digital solutions that merge smart design with solid
+                    development. Whether it’s a mobile app, a web platform, or
+                    an innovative tech project — I’m here to turn ideas into
+                    reality.
+                  </p>
+
+                  <div class="hero-actions">
+                    <a href="#portfolio" class="btn btn-primary"
+                      >View My Work</a
+                    >
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                  </div>
+
+                  <div class="social-links">
+                    <a href="https://www.instagram.com/ayon_aryan5/"
+                      ><i class="bi bi-instagram"></i
+                    ></a>
+                    <a href="https://www.facebook.com/AYON.ARYAN5/"
+                      ><i class="bi bi-facebook"></i
+                    ></a>
+                    <a href="https://github.com/AYON-ARYAN"
+                      ><i class="bi bi-github"></i
+                    ></a>
+                    <a href="https://www.linkedin.com/in/ayon-aryan-917078238/"
+                      ><i class="bi bi-linkedin"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                <div class="hero-visual">
+                  <div class="profile-container">
+                    <div class="profile-background"></div>
+                    <img
+                      src="assets/img/person/myphoto.jpeg"
+                      alt="Ayon Aryan"
+                      class="profile-image"
+                    />
+                    <div class="floating-elements">
+                      <div class="floating-icon icon-1">
+                        <i class="bi bi-palette"></i>
+                      </div>
+                      <div class="floating-icon icon-2">
+                        <i class="bi bi-code-slash"></i>
+                      </div>
+                      <div class="floating-icon icon-3">
+                        <i class="bi bi-lightbulb"></i>
+                      </div>
+                      <div class="floating-icon icon-4">
+                        <i class="bi bi-graph-up"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Hero Section -->
+
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row">
+            <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
+              <div class="profile-card">
+                <div class="profile-header">
+                  <div class="profile-image">
+                    <img
+                      src="assets/img/person/myphoto2.jpeg"
+                      alt="Profile Image"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="profile-badge">
+                    <i class="bi bi-check-circle-fill"></i>
+                  </div>
+                </div>
+
+                <div class="profile-content">
+                  <h3>Ayon Aryan</h3>
+                  <p class="profession">Creative Director &amp; Developer</p>
+
+                  <div class="contact-links">
+                    <a href="mailto:ayonaryan5@gmail.com" class="contact-item">
+                      <i class="bi bi-envelope"></i>
+                      ayonaryan5@gmail.com
+                    </a>
+                    <a href="tel:+91 7991126269" class="contact-item">
+                      <i class="bi bi-telephone"></i>
+                      +91 7991126269
+                    </a>
+                    <a href="ayonaryan5@gmail.com" class="contact-item">
+                      <i class="bi bi-geo-alt"></i>
+                      Bihar, India
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
+              <div class="about-content">
+                <div class="section-header">
+                  <span class="badge-text">Get to Know Me</span>
+                  <h2>Hey, You Found Me! Let’s Get Acquainted</h2>
+                </div>
+
+                <div class="description">
+                  <p>
+                    Hey there! I’m Ayon Aryan, a passionate Computer Science
+                    Engineering student with a love for building tech that makes
+                    a difference. From crafting Android apps to exploring AI and
+                    IoT, I enjoy turning ideas into working solutions. I’ve
+                    worked on projects like smart door locks, glucose detectors,
+                    and even tourist recommendation apps using AI. Currently,
+                    I’m diving deeper into native Android development, machine
+                    learning, and system-level programming in C/C++..
+                  </p>
+
+                  <p>
+                    Beyond the code, I love learning how things work — and even
+                    more, how to make them better. If you're into cool tech,
+                    creative ideas, or building for impact, we’ll get along just
+                    fine..
+                  </p>
+                </div>
+
+                <div class="stats-grid">
+                  <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Projects Completed</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-number">2+</div>
+                    <div class="stat-label">Years of Coding Experience</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Learning & Improvement Rate</div>
+                  </div>
+                </div>
+
+                <div class="details-grid">
+                  <div class="detail-row">
+                    <div class="detail-item">
+                      <span class="detail-label">Specialization</span>
+                      <span class="detail-value"
+                        >UI/UX Design &amp; Development</span
+                      >
+                    </div>
+                    <div class="detail-item">
+                      <span class="detail-label">Experience Level</span>
+                      <span class="detail-value">Aspiring Software Engineer</span>
+                    </div>
+                  </div>
+                  <div class="detail-row">
+                    <div class="detail-item">
+                      <span class="detail-label">Education</span>
+                      <span class="detail-value">Computer Science Engineering, RV University</span>
+                    </div>
+                    <div class="detail-item">
+                      <span class="detail-label">Languages</span>
+                      <span class="detail-value">English, Hindi</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cta-section">
+                  <a href="assets/profile/MyCv.pdf" class="btn btn-primary">
+                    <i class="bi bi-download"></i>
+                    Download Resume
+                  </a>
+                  <a href="#" class="btn btn-outline">
+                    <i class="bi bi-chat-dots"></i>
+                    Let's Talk
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /About Section -->
+      <!-- Skills Section -->
+      <section id="skills" class="skills section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Skills</h2>
+          <p>
+            Stats-savvy. Insight-ready.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row">
+            <div class="col-lg-6">
+              <div
+                class="skills-category"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <h3>Front-end Development</h3>
+                <div class="skills-animation">
+                  <div class="skill-item">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h4>HTML/CSS</h4>
+                      <span class="skill-percentage">82%</span>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="82"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      Good knowledge of semantic HTML5 and modern CSS3
+                      techniques
+                    </div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h4>JavaScript</h4>
+                      <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="85"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      Strong proficiency in ES6+, DOM manipulation, and modern
+                      frameworks
+                    </div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h4>React</h4>
+                      <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="80"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      Experience with React hooks, state management, and
+                      component architecture
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Frontend Skills -->
+            </div>
+
+            <div class="col-lg-6">
+              <div
+                class="skills-category"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <h3>Back-end Development</h3>
+                <div class="skills-animation">
+                  <div class="skill-item">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h4>C++/C</h4>
+                      <span class="skill-percentage">88%</span>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="88"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      Proficient in C/C++ with hands-on experience in data structures, algorithms, and low-level programming. Skilled in building robust, high-performance applications.
+                    </div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h4>Python</h4>
+                      <span class="skill-percentage">89%</span>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="89"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      Python development with Django and data analysis tools
+                    </div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h4>SQL</h4>
+                      <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="80"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      Database design, optimization, and complex queries
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Backend Skills -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Skills Section -->
+
+      <!-- Resume Section -->
+      <section id="resume" class="resume section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Resume</h2>
+          <p>
+           Here’s a quick look at my journey so far — from academic achievements to hands-on projects, internships, and technical skills. Download my resume below to learn more about my experience and what I bring to the table.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <!-- Left column with summary and contact -->
+            <div class="col-lg-4">
+              <div
+                class="resume-side"
+                data-aos="fade-right"
+                data-aos-delay="100"
+              >
+                <div class="profile-img mb-4">
+                  <img
+                    src="assets/img/person/myphoto2.jpeg"
+                    alt="Profile"
+                    class="img-fluid rounded"
+                  />
+                </div>
+
+                <h3>Professional Summary</h3>
+                <p>
+                  Driven software architect with expertise in developing
+                  scalable, high-performance enterprise solutions. Passionate
+                  about leveraging cutting-edge technologies to solve complex
+                  business challenges.
+                </p>
+
+                <h3 class="mt-4">Contact Information</h3>
+                <ul class="contact-info list-unstyled">
+                  <li>
+                    <i class="bi bi-geo-alt"></i> Aishwarya Jewellers,Main Road Nayachak ,Khemnichak,
+                    Patna 800027
+                  </li>
+                  <li><i class="bi bi-envelope"></i> ayonaryan5@gmail.com</li>
+                  <li><i class="bi bi-phone"></i> +91 7991126269</li>
+                  <li>
+                    <i class="bi bi-linkedin"></i> https://www.linkedin.com/in/ayon-aryan-917078238/
+                  </li>
+                </ul>
+
+                <div class="skills-animation mt-4">
+                  <h3>Technical Skills</h3>
+                  <div class="skill-item">
+                    <div class="d-flex justify-content-between">
+                      <span>Android Development</span>
+                      <span>95%</span>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="95"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="d-flex justify-content-between">
+                      <span>JAVA</span>
+                      <span>85%</span>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="85"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="d-flex justify-content-between">
+                      <span>Research Work</span>
+                      <span>90%</span>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="90"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="d-flex justify-content-between">
+                      <span>Project Management</span>
+                      <span>80%</span>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="80"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right column with experience and education -->
+            <div class="col-lg-8 ps-4 ps-lg-5">
+              <!-- Experience Section -->
+              <div class="resume-section" data-aos="fade-up">
+                <h3>
+                  <i class="bi bi-briefcase me-2"></i>Professional Experience
+                </h3>
+<div class="resume-item">
+  <h4>Native Android Developer Intern</h4>
+  <h5>February 2025 - Present</h5>
+  <p class="company">
+    <i class="bi bi-building"></i> Techpuram
+  </p>
+  <ul>
+    <li>
+      Developed and maintained Android applications using Java and XML within a collaborative team environment.
+    </li>
+    <li>
+      Integrated a custom-trained ML model into a Print Quality Checker app to detect defects in scanned documents directly on-device.
+    </li>
+    <li>
+      Worked with TensorFlow Lite for deploying lightweight ML models, improving detection accuracy and speed on mobile devices.
+    </li>
+    <li>
+      Contributed to enhancing app UI/UX, implementing RESTful APIs, and optimizing performance for smoother user experience.
+    </li>
+  </ul>
+</div>
+<!-- 
+
+                <div class="resume-item">
+                  <h4>Lead Developer</h4>
+                  <h5>2019 - 2022</h5>
+                  <p class="company">
+                    <i class="bi bi-building"></i> Digital Solutions Corp.
+                  </p>
+                  <ul>
+                    <li>
+                      Spearheaded development of company's flagship product
+                      reaching 1M+ users
+                    </li>
+                    <li>
+                      Implemented CI/CD pipeline reducing deployment time by 60%
+                    </li>
+                    <li>
+                      Managed team of 8 developers across multiple projects
+                    </li>
+                    <li>Increased code test coverage from 45% to 90%</li>
+                  </ul>
+                </div>
+              </div> -->
+
+              <!-- Education Section -->
+              <div
+                class="resume-section"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <h3><i class="bi bi-mortarboard me-2"></i>Education</h3>
+
+                <div class="resume-item">
+                  <h4>BTech in Computer Science</h4>
+                  <h5>September 2023</h5>
+                  <p class="company">
+                    <i class="bi bi-building"></i> RV University
+                  </p>
+                  <p>
+                    Specialized in Artificial Intelligence and Machine Learning.
+                  </p>
+                </div>
+
+                <div class="resume-item">
+                  <h4>Class 12 in PCM</h4>
+                  <h5>2010 - 2023</h5>
+                  <p class="company"><i class="bi bi-building"></i> DPS Patna</p>
+                  <p>
+                    Led school's skating club.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Certifications Section -->
+              <div
+                class="resume-section"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <h3><i class="bi bi-award me-2"></i>Certifications</h3>
+
+                <div class="resume-item">
+                  <h4>Supervised Machine Learning: Regression and Classification</h4>
+                  <h5>2024</h5>
+                </div>
+
+                <div class="resume-item">
+                  <h4>Career Essentials in Business Analysis by Microsoft and LinkedIn</h4>
+                  <h5>2024</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Resume Section -->
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Portfolio</h2>
+          <p>
+           A collection of projects that showcase my skills in Android development, machine learning, and system-level programming. Each project reflects my passion for solving real-world problems through clean code and creative tech solutions.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="isotope-layout"
+            data-default-filter="*"
+            data-layout="masonry"
+            data-sort="original-order"
+          >
+            <div class="row">
+              <div class="col-lg-3 filter-sidebar">
+                <div
+                  class="filters-wrapper"
+                  data-aos="fade-right"
+                  data-aos-delay="150"
+                >
+                  <ul class="portfolio-filters isotope-filters">
+                    <li data-filter="*" class="filter-active">All Projects</li>
+                    <li data-filter=".filter-photography">Micro Controllers</li>
+                    <li data-filter=".filter-design">Machine Learning</li>
+                    <li data-filter=".filter-automotive">LLM</li>
+                    <li data-filter=".filter-nature">BlockChain Dev</li>
+                    <li data-filter=".filter-nature">Data Science</li>
+
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-lg-9">
+                <div
+                  class="row gy-4 portfolio-container isotope-container"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <div
+                    class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography"
+                  >
+                    <div class="portfolio-wrap">
+                      <img
+                        src="assets/img/portfolio/image3.png"
+                        class="img-fluid"
+                        alt="Portfolio Image"
+                        loading="lazy"
+                      />
+                      <div class="portfolio-info">
+                        <div class="content">
+                          <span class="category">LLM</span>
+                          <h4>Intelli Chat AI</h4>
+                          <div class="portfolio-links">
+                            <a
+                              href="assets/img/portfolio/image3.png"
+                              class="glightbox"
+                              title="Capturing Moments"
+                              ><i class="bi bi-plus-lg"></i
+                            ></a>
+                            <a
+                              href="https://github.com/AYON-ARYAN/INTELLI-CHAT-AI"
+                              title="More Details"
+                              ><i class="bi bi-arrow-right"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Portfolio Item -->
+
+                  <div
+                    class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design"
+                  >
+                    <div class="portfolio-wrap">
+                      <img
+                        src="assets/img/portfolio/image2.png"
+                        class="img-fluid"
+                        alt="Portfolio Image"
+                        loading="lazy"
+                      />
+                      <div class="portfolio-info">
+                        <div class="content">
+                          <span class="category">Micro Controllers</span>
+                          <h4>Glucose level Detector</h4>
+                          <div class="portfolio-links">
+                            <a
+                              href="assets/img/portfolio/image2.png"
+                              class="glightbox"
+                              title="Woodcraft Design"
+                              ><i class="bi bi-plus-lg"></i
+                            ></a>
+                            <a
+                              href="https://github.com/AYON-ARYAN/GLUCOSENCE"
+                              title="More Details"
+                              ><i class="bi bi-arrow-right"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Portfolio Item -->
+
+                  <div
+                    class="col-lg-6 col-md-6 portfolio-item isotope-item filter-automotive"
+                  >
+                    <div class="portfolio-wrap">
+                      <img
+                        src="assets/img/portfolio/image5.png"
+                        class="img-fluid"
+                        alt="Portfolio Image"
+                        loading="lazy"
+                      />
+                      <div class="portfolio-info">
+                        <div class="content">
+                          <span class="category">Data Science</span>
+                          <h4>Movie Recommendation System</h4>
+                          <div class="portfolio-links">
+                            <a
+                              href="assets/img/portfolio/image5.png"
+                              class="glightbox"
+                              title="Movie Recommendation System"
+                              ><i class="bi bi-plus-lg"></i
+                            ></a>
+                            <a
+                              href="https://github.com/AYON-ARYAN/Movie_Reccomendation_System"
+                              title="More Details"
+                              ><i class="bi bi-arrow-right"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Portfolio Item -->
+
+                  <div
+                    class="col-lg-6 col-md-6 portfolio-item isotope-item filter-nature"
+                  >
+                    <div class="portfolio-wrap">
+                      <img
+                        src="assets/img/portfolio/image4.png"
+                        class="img-fluid"
+                        alt="Portfolio Image"
+                        loading="lazy"
+                      />
+                      <div class="portfolio-info">
+                        <div class="content">
+                          <span class="category">Data Science</span>
+                          <h4>Delhi Climate Analysis</h4>
+                          <div class="portfolio-links">
+                            <a
+                              href="assets/img/portfolio/image4.png"
+                              class="glightbox"
+                              title="Delhi Climate Analysis"
+                              ><i class="bi bi-plus-lg"></i
+                            ></a>
+                            <a
+                              href="https://github.com/AYON-ARYAN/DELHI-WEATHER-ANALYSIS"
+                              title="More Details"
+                              ><i class="bi bi-arrow-right"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Portfolio Item -->
+
+                  <div
+                    class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography"
+                  >
+                    <div class="portfolio-wrap">
+                      <img
+                        src="assets/img/portfolio/image6.png"
+                        class="img-fluid"
+                        alt="Portfolio Image"
+                        loading="lazy"
+                      />
+                      <div class="portfolio-info">
+                        <div class="content">
+                          <span class="category">Photography</span>
+                          <h4>BlockChain Voting System</h4>
+                          <div class="portfolio-links">
+                            <a
+                              href="assets/img/portfolio/image6.png"
+                              class="glightbox"
+                              title="BlockChain Voting System"
+                              ><i class="bi bi-plus-lg"></i
+                            ></a>
+                            <a
+                              href="https://github.com/AYON-ARYAN/Blackchain-Voting-System"
+                              title="More Details"
+                              ><i class="bi bi-arrow-right"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Portfolio Item -->
+
+                  <div
+                    class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design"
+                  >
+                    <div class="portfolio-wrap">
+                      <img
+                        src="assets/img/portfolio/image7.png"
+                        class="img-fluid"
+                        alt="Portfolio Image"
+                        loading="lazy"
+                      />
+                      <div class="portfolio-info">
+                        <div class="content">
+                          <span class="category">null</span>
+                          <h4>Math Ability</h4>
+                          <div class="portfolio-links">
+                            <a
+                              href="assets/img/portfolio/image7.png"
+                              class="glightbox"
+                              title="Math Ability"
+                              ><i class="bi bi-plus-lg"></i
+                            ></a>
+                            <a
+                              href="https://github.com/AYON-ARYAN/MATHS_GAME_USING_FLASK"
+                              title="More Details"
+                              ><i class="bi bi-arrow-right"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Portfolio Item -->
+                </div>
+                <!-- End Portfolio Container -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Portfolio Section -->
+
+      <!-- Services Section -->
+     <section id="services" class="services section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>What I Do</h2>
+    <p>
+      Here's a glimpse into the areas I love working in — from building native Android apps to exploring AI and low-level systems programming.
+    </p>
+  </div>
+  <!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="service-header">
+      <div class="row align-items-center">
+        <div class="col-lg-8 col-md-12">
+          <div class="service-intro">
+            <h2 class="service-heading">
+              <div>Skills That Drive</div>
+              <div><span>Real-World Solutions</span></div>
+            </h2>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12">
+          <div class="service-summary">
+            <p>
+              I bring a mix of creativity and engineering to every project I take on — always learning, always building, and always ready for the next challenge.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <!-- Android Development -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-card position-relative z-1">
+          <div class="service-icon">
+            <i class="bi bi-phone"></i>
+          </div>
+          <h3><a href="#">Native <span>Android Development</span></a></h3>
+          <p>
+            Building clean, high-performance Android apps using Java and XML. Experienced with Android Studio, API integration, and real-world debugging.
+          </p>
+        </div>
+      </div>
+
+      <!-- AI & ML -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-card position-relative z-1">
+          <div class="service-icon">
+            <i class="bi bi-cpu"></i>
+          </div>
+          <h3><a href="#">AI & <span>ML Integration</span></a></h3>
+          <p>
+            Leveraging machine learning models in mobile and web apps — including image quality checking and prediction tasks using TensorFlow Lite.
+          </p>
+        </div>
+      </div>
+
+      <!-- Web Development -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-card position-relative z-1">
+          <div class="service-icon">
+            <i class="bi bi-globe"></i>
+          </div>
+          <h3><a href="#">Frontend <span>Web Projects</span></a></h3>
+          <p>
+            Creating responsive websites with HTML, CSS, JavaScript, React, Next.js, and Tailwind CSS — perfect for portfolios, dashboards, and mini apps.
+          </p>
+        </div>
+      </div>
+
+      <!-- System Programming -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-card position-relative z-1">
+          <div class="service-icon">
+            <i class="bi bi-terminal"></i>
+          </div>
+          <h3><a href="#">System <span>Programming</span></a></h3>
+          <p>
+            Skilled in C/C++ with a strong grasp of memory management, pointers, and OS-level operations — building efficient system tools and CLI utilities.
+          </p>
+        </div>
+      </div>
+
+      <!-- Data & Statistics -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-card position-relative z-1">
+          <div class="service-icon">
+            <i class="bi bi-bar-chart-line"></i>
+          </div>
+          <h3><a href="#">Data & <span>Statistics</span></a></h3>
+          <p>
+            Turning raw data into insight with statistical analysis and visualizations. Comfortable with data preprocessing, EDA, and basic ML modeling.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tech Exploration -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-card position-relative z-1">
+          <div class="service-icon">
+            <i class="bi bi-lightbulb"></i>
+          </div>
+          <h3><a href="#">Tech <span>Exploration</span></a></h3>
+          <p>
+            Always experimenting with new ideas — from IoT to generative AI — and building prototypes that push the boundaries of what's possible.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- /Services Section -->
+
+     
+      <!-- Contact Section -->
+      <section id="contact" class="contact section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Contact</h2>
+          <p>
+            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row g-4 g-lg-5">
+            <div class="col-lg-5">
+              <div class="info-box">
+                <h3>Contact Info</h3>
+                <p>
+                Got a project idea, a question, or just want to say hi? Feel free to reach out — I'm always open to new opportunities and collaborations!
+
+                </p>
+
+                <div class="info-item">
+                  <div class="icon-box">
+                    <i class="bi bi-geo-alt"></i>
+                  </div>
+                  <div class="content">
+                    <h4>My Location</h4>
+                    <p>Main Road Nayachak</p>
+                    <p>Khemnichak, Patna 800027</p>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="icon-box">
+                    <i class="bi bi-telephone"></i>
+                  </div>
+                  <div class="content">
+                    <h4>Phone Number</h4>
+                    <p>+91 7991126269</p>
+                    <p>+91 9973159969</p>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="icon-box">
+                    <i class="bi bi-envelope"></i>
+                  </div>
+                  <div class="content">
+                    <h4>Email Address</h4>
+                    <p>ayonaryan5@gmail.com</p>
+                    <p>ayonaryan5@outlook.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="contact-form">
+                <h3>Get In Touch</h3>
+                <p>
+                Whether it’s feedback, collaboration, or a freelance opportunity — drop me a message and I’ll get back to you soon!
+                </p>
+<form action="https://formsubmit.co/ayonaryan5@gmail.com" method="POST">
+  <!-- Disable CAPTCHA and redirect to a thank-you message -->
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_next" value="https://yourusername.github.io/thankyou.html" />
+
+  <div class="row gy-4">
+    <div class="col-md-6">
+      <input type="text" name="name" class="form-control" placeholder="Your Name" required />
+    </div>
+
+    <div class="col-md-6">
+      <input type="email" class="form-control" name="email" placeholder="Your Email" required />
+    </div>
+
+    <div class="col-12">
+      <input type="text" class="form-control" name="subject" placeholder="Subject" required />
+    </div>
+
+    <div class="col-12">
+      <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+    </div>
+
+    <div class="col-12 text-center">
+      <button type="submit" class="btn">Send Message</button>
+    </div>
+  </div>
+</form>
+
+                
+
+                    
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Contact Section -->
+    </main>
+
+    <footer id="footer" class="footer position-relative">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Copyright</span>
+            <strong class="px-1 sitename">Ayon Aryan</strong>
+            <span>All Rights Reserved</span>
+          </p>
+        </div>
+        <div class="credits">
+          Designed by Aishwarya Aryan
+        </div>
+      </div>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
