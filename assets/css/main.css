@@ -2592,4 +2592,19 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+  /* Experience section company name fix */
+.experience-company {
+  color: #ffffff !important;   /* pure white for dark backgrounds */
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+}
+/* Experience section company name fix */
+.experience-company {
+  color: #ffffff !important;   /* pure white for dark backgrounds */
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
 }
