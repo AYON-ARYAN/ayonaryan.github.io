@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AI Database Manager — Ayon Aryan</title>
+    <meta
+      name="description"
+      content="Case study: Natural language to SQL transpilation with locally hosted LLM inference."
+    />
+    <link href="../assets/img/profile/logo.png" rel="icon" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <a href="../index.html" class="nav-logo">Ayon Aryan</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#expertise">Expertise</a></li>
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <a href="../assets/img/profile/MyCv.pdf" class="nav-cta" target="_blank"
+          >Résumé</a
+        ><button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <main>
+      <section class="case-hero">
+        <div class="container">
+          <a href="../index.html#work" class="back-link" data-aos="fade-up"
+            ><i class="bi bi-arrow-left"></i> All Work</a
+          >
+          <p class="section-eyebrow" data-aos="fade-up">
+            LLM · Query Generation
+          </p>
+          <h1 class="case-title" data-aos="fade-up">AI Database Manager</h1>
+          <p class="case-subtitle" data-aos="fade-up">
+            Natural language to SQL transpilation via locally hosted Mistral
+            inference with schema-aware prompting and human-in-the-loop
+            execution.
+          </p>
+          <div class="case-meta" data-aos="fade-up">
+            <div class="case-meta-item">
+              <span class="case-meta-label">Role</span
+              ><span class="case-meta-value">Sole Engineer</span>
+            </div>
+            <div class="case-meta-item">
+              <span class="case-meta-label">Stack</span
+              ><span class="case-meta-value"
+                >Ollama · Mistral · SQLite · Python</span
+              >
+            </div>
+            <div class="case-meta-item">
+              <span class="case-meta-label">Repository</span
+              ><span class="case-meta-value"
+                ><a
+                  href="https://github.com/AYON-ARYAN/DATABASE-MANAGER"
+                  target="_blank"
+                  >GitHub ↗</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="case-hero-img" data-aos="fade-up">
+        <img
+          src="../assets/img/portfolio/proj-dbmanager.png"
+          alt="AI Database Manager"
+        />
+      </div>
+
+      <section class="case-section">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <p class="section-eyebrow">The Challenge</p>
+              <h2 class="case-heading">
+                Democratizing<br /><em>database access.</em>
+              </h2>
+            </div>
+            <div class="col-lg-8">
+              <p class="body-text">
+                Non-technical stakeholders often need data from relational
+                databases but lack SQL proficiency. Existing NL-to-SQL solutions
+                rely on cloud APIs, introducing latency, cost, and data privacy
+                concerns. The challenge was to engineer a system that translates
+                natural language queries into valid, executable SQL — running
+                entirely on local infrastructure with no external API
+                dependencies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section section-dark">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <p class="section-eyebrow">The Architecture</p>
+              <h2 class="case-heading">
+                Schema-aware<br /><em>transpilation.</em>
+              </h2>
+            </div>
+            <div class="col-lg-8">
+              <div class="arch-list">
+                <div class="arch-item">
+                  <span class="expertise-number">01</span>
+                  <div>
+                    <h4>Schema Introspection</h4>
+                    <p>
+                      Automatic extraction of table names, column types,
+                      constraints, and relationships from the target database.
+                      This schema context is injected into the LLM prompt to
+                      ensure structurally valid SQL generation.
+                    </p>
+                  </div>
+                </div>
+                <div class="arch-item">
+                  <span class="expertise-number">02</span>
+                  <div>
+                    <h4>Local LLM Inference (Ollama + Mistral)</h4>
+                    <p>
+                      Mistral model hosted locally via Ollama. Zero cloud
+                      dependency. Natural language queries are transpiled into
+                      SQL through schema-constrained few-shot prompting with
+                      syntactic validation.
+                    </p>
+                  </div>
+                </div>
+                <div class="arch-item">
+                  <span class="expertise-number">03</span>
+                  <div>
+                    <h4>SQL Validation & Safety</h4>
+                    <p>
+                      Generated SQL is parsed and validated before execution.
+                      Destructive operations (DROP, DELETE, TRUNCATE) require
+                      explicit confirmation. Snapshot-based rollback enables
+                      safe experimentation.
+                    </p>
+                  </div>
+                </div>
+                <div class="arch-item">
+                  <span class="expertise-number">04</span>
+                  <div>
+                    <h4>Human-in-the-Loop Execution</h4>
+                    <p>
+                      Users review generated SQL before execution. Results are
+                      displayed in formatted tables. Query history enables
+                      refinement and iterative exploration of the database.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <p class="section-eyebrow">The Outcome</p>
+              <h2 class="case-heading">
+                Local-first<br /><em>data intelligence.</em>
+              </h2>
+            </div>
+            <div class="col-lg-8">
+              <p class="body-text">
+                The system enables natural language database interaction with
+                zero cloud dependency. Schema-aware prompting ensures
+                structurally valid SQL, while the human-in-the-loop design
+                prevents unintended data mutations. The entire pipeline runs on
+                commodity hardware via Ollama, making it accessible for
+                privacy-sensitive environments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-nav">
+        <div class="container">
+          <div class="case-nav-inner">
+            <a href="legal-ai.html" class="case-nav-link"
+              ><span class="case-nav-label">Previous</span
+              ><span class="case-nav-title">← Legal AI LLM</span></a
+            >
+            <a href="voice-ai.html" class="case-nav-link case-nav-next"
+              ><span class="case-nav-label">Next Project</span
+              ><span class="case-nav-title">Voice Intelligence →</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <span class="footer-logo">Ayon Aryan</span>
+          <p>&copy; 2025 · Engineered with precision.</p>
+          <div class="footer-links">
+            <a href="https://github.com/AYON-ARYAN" target="_blank"
+              ><i class="bi bi-github"></i></a
+            ><a
+              href="https://www.linkedin.com/in/ayon-aryan-917078238/"
+              target="_blank"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

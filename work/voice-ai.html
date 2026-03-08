@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Offline Voice Intelligence — Ayon Aryan</title>
+    <meta
+      name="description"
+      content="Case study: Fully offline conversational AI for Apple Silicon with on-device LLM inference."
+    />
+    <link href="../assets/img/profile/logo.png" rel="icon" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <a href="../index.html" class="nav-logo">Ayon Aryan</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#expertise">Expertise</a></li>
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <a href="../assets/img/profile/MyCv.pdf" class="nav-cta" target="_blank"
+          >Résumé</a
+        ><button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <main>
+      <section class="case-hero">
+        <div class="container">
+          <a href="../index.html#work" class="back-link" data-aos="fade-up"
+            ><i class="bi bi-arrow-left"></i> All Work</a
+          >
+          <p class="section-eyebrow" data-aos="fade-up">AI · On-Device</p>
+          <h1 class="case-title" data-aos="fade-up">
+            Offline Voice Intelligence
+          </h1>
+          <p class="case-subtitle" data-aos="fade-up">
+            Fully offline conversational AI for Apple Silicon. Local
+            speech-to-text, on-device LLM inference, and multi-turn state
+            management — zero cloud dependency.
+          </p>
+          <div class="case-meta" data-aos="fade-up">
+            <div class="case-meta-item">
+              <span class="case-meta-label">Role</span
+              ><span class="case-meta-value">Sole Engineer</span>
+            </div>
+            <div class="case-meta-item">
+              <span class="case-meta-label">Stack</span
+              ><span class="case-meta-value"
+                >Speech Recognition · Local LLM · macOS · Python</span
+              >
+            </div>
+            <div class="case-meta-item">
+              <span class="case-meta-label">Repository</span
+              ><span class="case-meta-value"
+                ><a
+                  href="https://github.com/AYON-ARYAN/PERSONAL_ASSISTANT"
+                  target="_blank"
+                  >GitHub ↗</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="case-hero-img" data-aos="fade-up">
+        <img
+          src="../assets/img/portfolio/proj-voiceai.png"
+          alt="Voice Intelligence"
+        />
+      </div>
+
+      <section class="case-section">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <p class="section-eyebrow">The Challenge</p>
+              <h2 class="case-heading">
+                Air-gapped<br /><em>intelligence.</em>
+              </h2>
+            </div>
+            <div class="col-lg-8">
+              <p class="body-text">
+                Cloud-based voice assistants transmit every spoken word to
+                remote servers — a fundamental privacy compromise. Professionals
+                working with sensitive information, or users in environments
+                with unreliable connectivity, need conversational AI that
+                operates entirely on-device with zero telemetry and zero network
+                requests.
+              </p>
+              <p class="body-text">
+                The challenge was to engineer a voice assistant that matches the
+                conversational quality of cloud services while running
+                completely air-gapped on Apple Silicon hardware.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section section-dark">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <p class="section-eyebrow">The Architecture</p>
+              <h2 class="case-heading">On-device<br /><em>pipeline.</em></h2>
+            </div>
+            <div class="col-lg-8">
+              <div class="arch-list">
+                <div class="arch-item">
+                  <span class="expertise-number">01</span>
+                  <div>
+                    <h4>Local Speech-to-Text</h4>
+                    <p>
+                      Continuous audio capture with voice activity detection.
+                      Speech segments processed through a local transcription
+                      model running natively on Apple Silicon — no audio data
+                      leaves the device.
+                    </p>
+                  </div>
+                </div>
+                <div class="arch-item">
+                  <span class="expertise-number">02</span>
+                  <div>
+                    <h4>On-Device LLM Inference</h4>
+                    <p>
+                      Transcribed text is processed by a locally hosted language
+                      model optimized for Apple Silicon. Metal GPU acceleration
+                      enables low-latency inference with quality comparable to
+                      cloud endpoints.
+                    </p>
+                  </div>
+                </div>
+                <div class="arch-item">
+                  <span class="expertise-number">03</span>
+                  <div>
+                    <h4>Multi-Turn Conversation State</h4>
+                    <p>
+                      Persistent conversation memory enables contextual
+                      follow-up queries. Previous exchanges are maintained in a
+                      sliding context window, enabling natural multi-turn
+                      dialogue without repetition.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <p class="section-eyebrow">The Outcome</p>
+              <h2 class="case-heading">
+                Private<br /><em>by architecture.</em>
+              </h2>
+            </div>
+            <div class="col-lg-8">
+              <p class="body-text">
+                The resulting system delivers conversational AI capabilities
+                without any network requirements. Every component — speech
+                recognition, language understanding, and response generation —
+                executes locally on Apple Silicon. The architecture ensures that
+                no data, audio, or query content is transmitted externally,
+                making it suitable for high-security and privacy-critical
+                environments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-nav">
+        <div class="container">
+          <div class="case-nav-inner">
+            <a href="database-manager.html" class="case-nav-link"
+              ><span class="case-nav-label">Previous</span
+              ><span class="case-nav-title">← AI Database Manager</span></a
+            >
+            <a href="super-resolution.html" class="case-nav-link case-nav-next"
+              ><span class="case-nav-label">Next Project</span
+              ><span class="case-nav-title">Image Super-Resolution →</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <span class="footer-logo">Ayon Aryan</span>
+          <p>&copy; 2025 · Engineered with precision.</p>
+          <div class="footer-links">
+            <a href="https://github.com/AYON-ARYAN" target="_blank"
+              ><i class="bi bi-github"></i></a
+            ><a
+              href="https://www.linkedin.com/in/ayon-aryan-917078238/"
+              target="_blank"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,25 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Index - My Portfolio</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <title>Ayon Aryan — Engineer</title>
+    <meta
+      name="description"
+      content="Ayon Aryan — AI Systems Architect. Production LLM pipelines, RAG infrastructure, native Android engineering, and deep learning systems."
+    />
+    <meta
+      name="keywords"
+      content="Ayon Aryan, AI Engineer, LLM Architect, RAG, Android, Deep Learning"
+    />
+    <meta name="author" content="Ayon Aryan" />
+    <meta property="og:title" content="Ayon Aryan" />
+    <meta
+      property="og:description"
+      content="Engineering intelligence. Shipping systems."
+    />
+    <meta property="og:type" content="website" />
 
-    <!-- Logos -->
     <link href="assets/img/profile/logo.png" rel="icon" />
     <link href="assets/img/profile/logo.png" rel="apple-touch-icon" />
 
-    <!-- Fonts -->
+    <!-- Fonts: Playfair Display (luxury serif) + Inter (precision sans) -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Vendor CSS Files -->
     <link
       href="assets/vendor/bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
@@ -33,1239 +44,968 @@
       href="assets/vendor/glightbox/css/glightbox.min.css"
       rel="stylesheet"
     />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-
-    <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
-
-
   </head>
 
-  <body class="index-page">
-    <header
-      id="header"
-      class="header dark-background d-flex flex-column justify-content-center"
-    >
-      <i class="header-toggle d-xl-none bi bi-list"></i>
+  <body>
+    <div class="cursor-glow" id="cursorGlow"></div>
 
-      <div class="header-container d-flex flex-column align-items-start">
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li>
-              <a href="#hero" class="active"
-                ><i class="bi bi-house navicon"></i>Home</a
-              >
-            </li>
-            <li>
-              <a href="#about"><i class="bi bi-person navicon"></i> About</a>
-            </li>
-            <li>
-              <a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a>
-            </li>
-              <li>
-                <a href="#experience"><i class="bi bi-briefcase navicon"></i> Experience</a>
-              </li>
-
-
-            <li>
-              <a href="#portfolio"
-                ><i class="bi bi-images navicon"></i> Portfolio</a
-              >
-            </li>
-            <li>
-              <a href="#services"
-                ><i class="bi bi-hdd-stack navicon"></i> Services</a
-              >
-            </li>
-            <li>
-              <a href="https://wa.me/917991126269?text=Hi%2C%20I%20want%20to%20connect%20with%20you%21"
-
-                ><i class="bi bi-envelope navicon"></i> Contact</a
-              >
-            </li>
-          </ul>
-        </nav>
-
-        <div class="social-links text-center">
-
-          <a href="https://www.facebook.com/AYON.ARYAN5" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/ayon_aryan5/" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/ayon-aryan-917078238/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          <a href="https://github.com/AYON-ARYAN" class="github"><i class="bi bi-github"></i></a>
-
-        </div>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <a href="#hero" class="nav-logo">Ayon Aryan</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="assets/img/profile/MyCv.pdf" class="nav-cta" target="_blank"
+          >Résumé</a
+        >
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span>
+        </button>
       </div>
-    </header>
+    </nav>
 
-    <main class="main">
-      <!-- Hero Section -->
-      <section id="hero" class="hero section">
-        <div class="background-elements">
-          <div class="bg-circle circle-1"></div>
-          <div class="bg-circle circle-2"></div>
+    <main>
+      <!-- ===== HERO ===== -->
+      <section id="hero" class="hero">
+        <div class="hero-bg">
+          <img src="assets/img/hero-bg.png" alt="" aria-hidden="true" />
         </div>
+        <div class="container">
+          <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+            <p class="hero-eyebrow">AI Systems Architect</p>
+            <h1 class="hero-title">
+              Engineering<br />
+              <em>Intelligence.</em>
+            </h1>
+            <p class="hero-subtitle">
+              I architect production AI infrastructure — LLM orchestration, RAG
+              pipelines,<br class="d-none d-md-block" />
+              scalable backend systems, and native mobile applications.
+            </p>
+            <div class="hero-actions">
+              <a href="#work" class="btn-gold">Selected Work</a>
+              <a href="#contact" class="btn-ghost">Inquiries</a>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-line"><span></span></div>
+      </section>
 
-        <div class="hero-content">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-                <div class="hero-text">
-                  <h1>Personal <span class="accent-text">Website</span></h1>
-                  <h2>Ayon Aryan</h2>
-                  <p class="lead">
-                    I'm a
-                    <span
-                      class="typed"
-                      data-typed-items="UI/UX Designer, Android Developer, AI Enthusiast,Computer Science Engineer"
-                    ></span>
-                  </p>
-                  <p class="description">
-                    Driven by curiosity and creativity, I craft impactful
-                    digital solutions that merge smart design with solid
-                    development. Whether it’s a mobile app, a web platform, or
-                    an innovative tech project — I’m here to turn ideas into
-                    reality.
-                  </p>
-
-                  <div class="hero-actions">
-                    <a href="#portfolio" class="btn btn-primary"
-                      >View My Work</a
-                    >
-                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
-                  </div>
-
-                  <div class="social-links">
-                    <a href="https://www.instagram.com/ayon_aryan5/"
-                      ><i class="bi bi-instagram"></i
-                    ></a>
-                    <a href="https://www.facebook.com/AYON.ARYAN5/"
-                      ><i class="bi bi-facebook"></i
-                    ></a>
-                    <a href="https://github.com/AYON-ARYAN"
-                      ><i class="bi bi-github"></i
-                    ></a>
-                    <a href="https://www.linkedin.com/in/ayon-aryan-917078238/"
-                      ><i class="bi bi-linkedin"></i
-                    ></a>
-                  </div>
-                </div>
+      <!-- ===== ABOUT ===== -->
+      <section id="about" class="section">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-5" data-aos="fade-up">
+              <div class="about-portrait">
+                <img src="assets/img/person/myphoto.jpeg" alt="Ayon Aryan" />
               </div>
-
-              <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-                <div class="hero-visual">
-                  <div class="profile-container">
-                    <div class="profile-background"></div>
-                    <img
-                      src="assets/img/person/myphoto.jpeg"
-                      alt="Ayon Aryan"
-                      class="profile-image"
-                    />
-                    <div class="floating-elements">
-                      <div class="floating-icon icon-1">
-                        <i class="bi bi-palette"></i>
-                      </div>
-                      <div class="floating-icon icon-2">
-                        <i class="bi bi-code-slash"></i>
-                      </div>
-                      <div class="floating-icon icon-3">
-                        <i class="bi bi-lightbulb"></i>
-                      </div>
-                      <div class="floating-icon icon-4">
-                        <i class="bi bi-graph-up"></i>
-                      </div>
-                    </div>
-                  </div>
+            </div>
+            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="150">
+              <p class="section-eyebrow">About</p>
+              <h2 class="section-title">
+                The relentless pursuit of<br /><em>engineered excellence.</em>
+              </h2>
+              <p class="body-text">
+                Computer Science engineer specializing in artificial
+                intelligence and machine learning, with a secondary focus in
+                financial technology. My practice spans autonomous multi-agent
+                AI orchestration, generative adversarial networks for image
+                synthesis, domain-specific large language models with
+                adversarial robustness, and native Android application
+                development deployed to production.
+              </p>
+              <p class="body-text">
+                Previously, I architected AI infrastructure at
+                <strong>Broadrange AI</strong> (Chicago) — engineering legal
+                domain LLMs with retrieval-augmented generation and prompt
+                injection defense systems — and delivered production Android
+                applications at <strong>Techpuram Technology</strong> (Madurai)
+                with verified distribution on the Google Play Store.
+              </p>
+              <div class="about-metrics">
+                <div class="metric">
+                  <span class="metric-value">32</span>
+                  <span class="metric-label">Repositories</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric">
+                  <span class="metric-value">15+</span>
+                  <span class="metric-label">Systems Shipped</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric">
+                  <span class="metric-value">2</span>
+                  <span class="metric-label">Industry Engagements</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric">
+                  <span class="metric-value">2027</span>
+                  <span class="metric-label">B.Tech (Hons)</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- /Hero Section -->
 
-      <!-- About Section -->
-      <section id="about" class="about section">
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row">
-            <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
-              <div class="profile-card">
-                <div class="profile-header">
-                  <div class="profile-image">
-                    <img
-                      src="assets/img/person/myphoto2.jpeg"
-                      alt="Profile Image"
-                      class="img-fluid"
-                    />
-                  </div>
-                  <div class="profile-badge">
-                    <i class="bi bi-check-circle-fill"></i>
-                  </div>
-                </div>
-
-                <div class="profile-content">
-                  <h3>Ayon Aryan</h3>
-                  <p class="profession">Creative Director &amp; Developer</p>
-
-                  <div class="contact-links">
-                    <a href="mailto:ayonaryan5@gmail.com" class="contact-item">
-                      <i class="bi bi-envelope"></i>
-                      ayonaryan5@gmail.com
-                    </a>
-                    <a href="tel:+91 7991126269" class="contact-item">
-                      <i class="bi bi-telephone"></i>
-                      +91 7991126269
-                    </a>
-                    <a href="ayonaryan5@gmail.com" class="contact-item">
-                      <i class="bi bi-geo-alt"></i>
-                      Bihar, India
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
-              <div class="about-content">
-                <div class="section-header">
-                  <span class="badge-text">Get to Know Me</span>
-                  <h2>Hey, You Found Me! Let’s Get Acquainted</h2>
-                </div>
-
-                <div class="description">
-                  <p>
-                    Hey there! I’m Ayon Aryan, a passionate Computer Science
-                    Engineering student with a love for building tech that makes
-                    a difference. From crafting Android apps to exploring AI and
-                    IoT, I enjoy turning ideas into working solutions. I’ve
-                    worked on projects like smart door locks, glucose detectors,
-                    and even tourist recommendation apps using AI. Currently,
-                    I’m diving deeper into native Android development, machine
-                    learning, and system-level programming in C/C++.
-                  </p>
-
-                  <p>
-                    Beyond the code, I love learning how things work — and even
-                    more, how to make them better. If you're into cool tech,
-                    creative ideas, or building for impact, we’ll get along just
-                    fine.
-                  </p>
-                </div>
-
-                <div class="stats-grid">
-                  <div class="stat-item">
-                    <div class="stat-number">15+</div>
-                    <div class="stat-label">Projects Completed</div>
-                  </div>
-                  <div class="stat-item">
-                    <div class="stat-number">2+</div>
-                    <div class="stat-label">Years of Coding Experience</div>
-                  </div>
-                  <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Learning & Improvement Rate</div>
-                  </div>
-                </div>
-
-                <div class="details-grid">
-                  <div class="detail-row">
-                    <div class="detail-item">
-                      <span class="detail-label">Specialization</span>
-                      <span class="detail-value"
-                        >UI/UX Design &amp; Development</span
-                      >
-                    </div>
-                    <div class="detail-item">
-                      <span class="detail-label">Experience Level</span>
-                      <span class="detail-value">Aspiring Software Engineer</span>
-                    </div>
-                  </div>
-                  <div class="detail-row">
-                    <div class="detail-item">
-                      <span class="detail-label">Education</span>
-                      <span class="detail-value">Computer Science Engineering, RV University</span>
-                    </div>
-                    <div class="detail-item">
-                      <span class="detail-label">Languages</span>
-                      <span class="detail-value">English, Hindi</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="cta-section">
-                  <a href="assets/img/profile/MyCv.pdf" class="btn btn-primary">
-                    <i class="bi bi-download"></i>
-                    Download Resume
-                  </a>
-                  <a href="#" class="btn btn-outline">
-                    <i class="bi bi-chat-dots"></i>
-                    Let's Talk
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+      <!-- ===== EXPERTISE ===== -->
+      <section id="expertise" class="section section-dark">
+        <div class="hero-bg about-bg">
+          <img src="assets/img/about-bg.png" alt="" aria-hidden="true" />
         </div>
-      </section>
-      <!-- /About Section -->
- <section id="skills" class="skills section">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Skills</h2>
-    <p>Technical expertise demonstrated through real-world projects in AI, Web Development, Blockchain, and Data Analysis.</p>
-  </div>
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row">
-
-      <!-- Frontend Development -->
-      <div class="col-lg-6">
-        <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
-          <h3>Front-end Development</h3>
-          <div class="skills-animation">
-
-            <div class="skill-item">
-              <h4>HTML, CSS, JavaScript</h4>
-              <p>Developed responsive UIs for projects like <strong>Cars24-7</strong> and <strong>Movie Recommendation System</strong> using semantic HTML5, modern CSS3, and vanilla JS.</p>
-            </div>
-
-            <div class="skill-item">
-              <h4>React</h4>
-              <p>Built dynamic component-based frontends for <strong>Intelli Chat AI LLM</strong> and <strong>Docu AI</strong> with React Hooks and API integrations.</p>
-            </div>
-
-            <div class="skill-item">
-              <h4>GUI Design (Tkinter)</h4>
-              <p>Created interactive desktop apps like the <strong>Maths Game Using Tkinter</strong> for an engaging learning experience.</p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- Backend & Data -->
-      <div class="col-lg-6">
-        <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
-          <h3>Back-end & Data</h3>
-          <div class="skills-animation">
-
-            <div class="skill-item">
-              <h4>Python (Flask, Django)</h4>
-              <p>Developed backends for <strong>Maths Game Using Flask</strong>, <strong>Fake News Check</strong>, and AI-driven apps with Flask/Django and integrated ML models.</p>
-            </div>
-
-            <div class="skill-item">
-              <h4>Artificial Intelligence & LLMs</h4>
-              <p>Built <strong>Intelli Chat AI</strong> with LLMs for intelligent responses, and <strong>Docu AI</strong> for document-based question answering.</p>
-            </div>
-
-            <div class="skill-item">
-              <h4>Blockchain Development</h4>
-              <p>Implemented a secure <strong>Blockchain Voting System</strong> with Solidity smart contracts and a Web3.js frontend.</p>
-            </div>
-
-            <div class="skill-item">
-              <h4>C/C++</h4>
-              <p>Designed performance-focused solutions and hardware integration for <strong>Glucosence</strong> glucose detection system.</p>
-            </div>
-
-            <div class="skill-item">
-              <h4>Data Analysis</h4>
-              <p>Analyzed and visualized climate datasets in <strong>Delhi Weather Analysis</strong> using Pandas, NumPy, and Matplotlib.</p>
-            </div>
-
-            <div class="skill-item">
-              <h4>SQL & Databases</h4>
-              <p>Designed and optimized relational databases for multiple projects, ensuring efficient query performance.</p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-      <!-- Resume Section -->
-      <section id="resume" class="resume section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Resume</h2>
-          <p>
-           Here’s a quick look at my journey so far — from academic achievements to hands-on projects, internships, and technical skills. Download my resume below to learn more about my experience and what I bring to the table.
+        <div class="container">
+          <p class="section-eyebrow text-center" data-aos="fade-up">
+            Expertise
           </p>
+          <h2 class="section-title text-center" data-aos="fade-up">
+            Precision-engineered<br /><em>capabilities.</em>
+          </h2>
+
+          <div class="expertise-grid">
+            <div class="expertise-card" data-aos="fade-up" data-aos-delay="100">
+              <span class="expertise-number">01</span>
+              <h3>AI & LLM Infrastructure</h3>
+              <p>
+                Production RAG pipelines, BERT-driven intent classification,
+                multi-agent orchestration with dynamic tool routing, adversarial
+                prompt defense, and autonomous AI systems engineered for scale
+                and reliability.
+              </p>
+              <div class="expertise-stack">
+                Python · LangChain · FAISS · ChromaDB · Ollama · Spring Boot
+              </div>
+            </div>
+            <div class="expertise-card" data-aos="fade-up" data-aos-delay="200">
+              <span class="expertise-number">02</span>
+              <h3>Native Mobile Engineering</h3>
+              <p>
+                Production-grade Android applications — Kotlin, Jetpack Compose,
+                CameraX, on-device inference via TensorFlow Lite. Applications
+                with verified distribution on Google Play and runtime GPS
+                validation.
+              </p>
+              <div class="expertise-stack">
+                Kotlin · Jetpack Compose · CameraX · TFLite · Maps SDK
+              </div>
+            </div>
+            <div class="expertise-card" data-aos="fade-up" data-aos-delay="300">
+              <span class="expertise-number">03</span>
+              <h3>Deep Learning & Vision</h3>
+              <p>
+                GAN-based super-resolution architectures (Real-ESRGAN), U-Net
+                semantic segmentation for medical imaging, and transfer learning
+                pipelines optimized for production inference latency.
+              </p>
+              <div class="expertise-stack">
+                PyTorch · TensorFlow · Keras · Real-ESRGAN · U-Net
+              </div>
+            </div>
+            <div class="expertise-card" data-aos="fade-up" data-aos-delay="100">
+              <span class="expertise-number">04</span>
+              <h3>Backend & Data Architecture</h3>
+              <p>
+                Scalable microservice topologies, REST API design, vector
+                database integration, schema-aware query generation, and
+                end-to-end deployment orchestration from prototype to
+                production.
+              </p>
+              <div class="expertise-stack">
+                Spring Boot · Flask · PostgreSQL · pgvector · Docker · Linux
+              </div>
+            </div>
+            <div class="expertise-card" data-aos="fade-up" data-aos-delay="200">
+              <span class="expertise-number">05</span>
+              <h3>Frontend & Data Visualization</h3>
+              <p>
+                Responsive interface engineering with React and Next.js.
+                Interactive graph and data visualizations via D3.js.
+                Component-driven architecture for maintainable, performant UIs.
+              </p>
+              <div class="expertise-stack">
+                React · Next.js · D3.js · Tailwind CSS · TypeScript
+              </div>
+            </div>
+            <div class="expertise-card" data-aos="fade-up" data-aos-delay="300">
+              <span class="expertise-number">06</span>
+              <h3>Distributed & Embedded Systems</h3>
+              <p>
+                Smart contract development on Ethereum, decentralized consensus
+                mechanisms, hardware-level IoT sensor integration with embedded
+                C++ firmware, and real-time telemetry systems.
+              </p>
+              <div class="expertise-stack">
+                Solidity · Web3.js · C++ · Arduino · Embedded Systems
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- End Section Title -->
+      </section>
 
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4">
-            <!-- Left column with summary and contact -->
-            <div class="col-lg-4">
-              <div
-                class="resume-side"
-                data-aos="fade-right"
-                data-aos-delay="100"
-              >
-                <div class="profile-img mb-4">
-                  <img
-                    src="assets/img/person/myphoto2.jpeg"
-                    alt="Profile"
-                    class="img-fluid rounded"
-                  />
-                </div>
+      <!-- ===== CAREER ===== -->
+      <section class="section">
+        <div class="container">
+          <p class="section-eyebrow" data-aos="fade-up">Career</p>
+          <h2 class="section-title" data-aos="fade-up">
+            Professional<br /><em>trajectory.</em>
+          </h2>
 
-                <h3>Professional Summary</h3>
-                <p>
-                  Driven software architect with expertise in developing
-                  scalable, high-performance enterprise solutions. Passionate
-                  about leveraging cutting-edge technologies to solve complex
-                  business challenges.
+          <div class="career-timeline">
+            <div class="career-entry" data-aos="fade-up">
+              <div class="career-period">Jun — Aug 2025</div>
+              <div class="career-content">
+                <h3>AI Engineer</h3>
+                <p class="career-org">Broadrange AI · Chicago, Illinois</p>
+                <p class="career-desc">
+                  Architected Legal Domain LLM with retrieval-augmented
+                  generation infrastructure. Engineered document ingestion
+                  pipelines with semantic chunking for contextual grounding.
+                  Implemented PromptGuard V2 for adversarial prompt defense.
+                  Reduced hallucination through curated legal corpus training
+                  and retrieval-augmented validation.
                 </p>
-
-                <h3 class="mt-4">Contact Information</h3>
-                <ul class="contact-info list-unstyled">
-                  <li>
-                    <i class="bi bi-geo-alt"></i> Aishwarya Jewellers,Main Road Nayachak ,Khemnichak,
-                    Patna 800027
-                  </li>
-                  <li><i class="bi bi-envelope"></i> ayonaryan5@gmail.com</li>
-                  <li><i class="bi bi-phone"></i> +91 7991126269</li>
-                  <li>
-                    <i class="bi bi-linkedin"></i> https://www.linkedin.com/in/ayon-aryan-917078238/
-                  </li>
-                </ul>
-
-                <div class="skills-animation mt-4">
-                  <h3>Technical Skills</h3>
-                  <div class="skill-item">
-                    <div class="d-flex justify-content-between">
-                      <span>Android Development</span>
-                      <span>95%</span>
-                    </div>
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        aria-valuenow="95"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-
-                  <div class="skill-item">
-                    <div class="d-flex justify-content-between">
-                      <span>JAVA</span>
-                      <span>85%</span>
-                    </div>
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        aria-valuenow="85"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-
-                  <div class="skill-item">
-                    <div class="d-flex justify-content-between">
-                      <span>Research Work</span>
-                      <span>90%</span>
-                    </div>
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        aria-valuenow="90"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-
-                  <div class="skill-item">
-                    <div class="d-flex justify-content-between">
-                      <span>Project Management</span>
-                      <span>80%</span>
-                    </div>
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        aria-valuenow="80"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
-
-            <!-- Right column with experience and education -->
-            <div class="col-lg-8 ps-4 ps-lg-5">
-              <!-- Experience Section -->
-              <div class="resume-section" data-aos="fade-up">
-                <h3>
-                  <i class="bi bi-briefcase me-2"></i>Professional Experience
-                </h3>
-<div class="resume-item">
-  <h4>Native Android Developer Intern</h4>
-  <h5>February 2025 - August 2025</h5>
-  <p class="company">
-    <i class="bi bi-building"></i> Techpuram
-  </p>
-  <ul>
-    <li>
-      Developed and maintained Android applications using Java and XML within a collaborative team environment.
-    </li>
-    <li>
-      Integrated a custom-trained ML model into a Print Quality Checker app to detect defects in scanned documents directly on-device.
-    </li>
-    <li>
-      Worked with TensorFlow Lite for deploying lightweight ML models, improving detection accuracy and speed on mobile devices.
-    </li>
-    <li>
-      Contributed to enhancing app UI/UX, implementing RESTful APIs, and optimizing performance for smoother user experience.
-    </li>
-  </ul>
-</div>
-
-
-                <div class="resume-item">
-                  <h4>AI ML Intern</h4>
-                  <h5>2025  May to August 2025</h5>
-                  <p class="company">
-                    <i class="bi bi-building"></i> BroadRange AI
-                  </p>
-                  <ul>
-                    <li>
-                      Developed an LLM-powered legal chatbot for document-based Q&A.
-                    </li>
-                    <li>
-                      Used ChromaDB for vector storage and SambaNova for hosting LLMs.
-                    </li>
-                    <li>
-                      Implemented document upload & retrieval with a Flask-based backend.
-                    </li>
-                    
-                  </ul>
-                </div>
+            <div class="career-entry" data-aos="fade-up">
+              <div class="career-period">Feb — Aug 2025</div>
+              <div class="career-content">
+                <h3>Android Engineer</h3>
+                <p class="career-org">
+                  Techpuram Technology · Madurai, Tamil Nadu
+                </p>
+                <p class="career-desc">
+                  Engineered Geo GPS Camera — production Android application
+                  with verified Play Store distribution. Developed with Kotlin,
+                  Jetpack Compose, CameraX, and Maps SDK. Implemented
+                  server-side GPS spoofing detection. Integrated on-device ML
+                  inference for print quality defect analysis via TensorFlow
+                  Lite.
+                </p>
               </div>
+            </div>
+          </div>
 
-              <!-- Education Section -->
-              <div
-                class="resume-section"
-                data-aos="fade-up"
-                data-aos-delay="100"
-              >
-                <h3><i class="bi bi-mortarboard me-2"></i>Education</h3>
-
-                <div class="resume-item">
-                  <h4>BTech in Computer Science</h4>
-                  <h5>September 2023</h5>
-                  <p class="company">
-                    <i class="bi bi-building"></i> RV University
-                  </p>
-                  <p>
-                    Specialized in Artificial Intelligence and Machine Learning.
-                  </p>
-                </div>
-
-                <div class="resume-item">
-                  <h4>Class 12 in PCM</h4>
-                  <h5>2010 - 2023</h5>
-                  <p class="company"><i class="bi bi-building"></i> DPS Patna</p>
-                  <p>
-                    Led school's skating club.
-                  </p>
-                </div>
+          <div class="row g-5 mt-5">
+            <div class="col-lg-6" data-aos="fade-up">
+              <h3 class="subsection-heading">Education</h3>
+              <div class="education-entry">
+                <h4>B.Tech (Hons) Computer Science & Engineering</h4>
+                <p class="career-org">RV University, Bangalore · 2023 — 2027</p>
+                <p class="career-desc">
+                  Specialization: AI & Machine Learning · Minor: Financial
+                  Technology<br />Recipient — Best Project Award, Structured
+                  Innovation
+                </p>
               </div>
-
-              <!-- Certifications Section -->
-              <div
-                class="resume-section"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <h3><i class="bi bi-award me-2"></i>Certifications</h3>
-
-                <div class="resume-item">
-                  <h4>Supervised Machine Learning: Regression and Classification</h4>
-                  <h5>2024</h5>
-                </div>
-
-                <div class="resume-item">
-                  <h4>Career Essentials in Business Analysis by Microsoft and LinkedIn</h4>
-                  <h5>2024</h5>
-                </div>
+              <div class="education-entry">
+                <h4>Higher Secondary — PCM</h4>
+                <p class="career-org">
+                  Delhi Public School, Patna · 2010 — 2023
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up">
+              <h3 class="subsection-heading">Credentials</h3>
+              <div class="education-entry">
+                <h4>Programming in Modern C++</h4>
+                <p class="career-org">NPTEL · 2024 — 2025</p>
+              </div>
+              <div class="education-entry">
+                <h4>Supervised ML: Regression & Classification</h4>
+                <p class="career-org">Stanford Online · 2024</p>
+              </div>
+              <div class="education-entry">
+                <h4>Business Analysis Essentials</h4>
+                <p class="career-org">Microsoft & LinkedIn · 2024</p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- /Resume Section -->
-      <!-- Experience Section -->
-       <!-- Experience Section -->
-<section id="experience" class="experience section">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Experience</h2>
-    <p>
-      My professional journey across Android development and AI engineering, building production-grade applications and intelligent systems.
-    </p>
-  </div>
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row gy-4">
-
-      <!-- Techpuram Internship -->
-      <div class="col-lg-12">
-        <div class="experience-card p-4 shadow-sm rounded" data-aos="fade-up" data-aos-delay="200">
-          <div class="row align-items-center">
-
-            <div class="col-md-3 text-center">
-              <div class="experience-icon mb-3">
-                <i class="bi bi-phone fs-1 text-primary"></i>
-              </div>
-              <h6 class="text-muted">Feb 2025 – Aug 2025</h6>
-            </div>
-
-            <div class="col-md-9">
-              <h3>Native Android Developer Intern</h3>
-              <h5 style="color:#ffffff; font-weight:600;">Techpuram Technology</h5>
-
-
-              <ul>
-                <li>Built and enhanced native Android applications using Java and XML with strong focus on usability and performance.</li>
-                <li>Integrated Google Maps API and implemented server-side verification features.</li>
-                <li>Worked closely with developers and QA engineers to debug, test, and optimize mobile app performance.</li>
-                <li>Delivered production-ready features used by real clients.</li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- BroadRange AI Internship -->
-      <div class="col-lg-12">
-        <div class="experience-card p-4 shadow-sm rounded" data-aos="fade-up" data-aos-delay="300">
-          <div class="row align-items-center">
-
-            <div class="col-md-3 text-center">
-              <div class="experience-icon mb-3">
-                <i class="bi bi-cpu fs-1 text-primary"></i>
-              </div>
-              <h6 class="text-muted">May 2025 – Aug 2025</h6>
-            </div>
-
-            <div class="col-md-9">
-              <h3>AI Intern</h3>
-              <h5 style="color:#ffffff; font-weight:600;">Techpuram Technology</h5>
-
-
-              <ul>
-                <li>Developed an LLM-powered legal chatbot for document-based question answering.</li>
-                <li>Used ChromaDB for vector storage and semantic document retrieval.</li>
-                <li>Deployed large language models using SambaNova infrastructure.</li>
-                <li>Implemented document upload, retrieval, and response generation using a Flask-based backend.</li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- /Experience Section -->
-
-
-      <!-- Portfolio Section -->
-      <section id="portfolio" class="portfolio section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Portfolio</h2>
-          <p>
-           A collection of projects that showcase my skills in Android development, machine learning, and system-level programming. Each project reflects my passion for solving real-world problems through clean code and creative tech solutions.
+      <!-- ===== SELECTED WORK ===== -->
+      <section id="work" class="section section-dark">
+        <div class="container">
+          <p class="section-eyebrow text-center" data-aos="fade-up">
+            Selected Work
           </p>
-        </div>
-        <!-- End Section Title -->
+          <h2 class="section-title text-center" data-aos="fade-up">
+            Systems<br /><em>I've architected.</em>
+          </h2>
 
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div
             class="isotope-layout"
             data-default-filter="*"
             data-layout="masonry"
             data-sort="original-order"
           >
-            <div class="row">
-              <div class="col-lg-3 filter-sidebar">
-                <div
-                  class="filters-wrapper"
-                  data-aos="fade-right"
-                  data-aos-delay="150"
-                >
-                  <ul class="portfolio-filters isotope-filters">
-                    <li data-filter="*" class="filter-active">All Projects</li>
-                    <li data-filter=".filter-photography">Micro Controllers</li>
-                    <li data-filter=".filter-design">Machine Learning</li>
-                    <li data-filter=".filter-automotive">LLM</li>
-                    <li data-filter=".filter-nature">BlockChain Dev</li>
-                    <li data-filter=".filter-nature">Data Science</li>
-                    <li data-filter=".filter-llm">LLM Systems</li>
-                    <li data-filter=".filter-ai">AI Systems</li>
+            <div class="portfolio-filters isotope-filters" data-aos="fade-up">
+              <button data-filter="*" class="filter-active">All</button>
+              <button data-filter=".cat-ai">AI Systems</button>
+              <button data-filter=".cat-mobile">Mobile</button>
+              <button data-filter=".cat-ml">ML / DL</button>
+              <button data-filter=".cat-other">Other</button>
+            </div>
 
-
-                  </ul>
+            <div class="row g-4 portfolio-container isotope-container">
+              <!-- 1. Intelli Chat AI -->
+              <div
+                class="col-lg-6 portfolio-item isotope-item cat-ai"
+                data-aos="fade-up"
+              >
+                <div class="work-card">
+                  <div class="work-img">
+                    <img
+                      src="assets/img/portfolio/proj-intellichat.png"
+                      alt="IntelliChat AI"
+                      loading="lazy"
+                    />
+                    <div class="work-overlay">
+                      <a
+                        href="assets/img/portfolio/proj-intellichat.png"
+                        class="glightbox"
+                        ><i class="bi bi-arrows-fullscreen"></i
+                      ></a>
+                      <a
+                        href="https://github.com/AYON-ARYAN/INTELLI-CHAT-AI"
+                        target="_blank"
+                        ><i class="bi bi-github"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="work-detail">
+                    <span class="work-category"
+                      >AI · Distributed Architecture</span
+                    >
+                    <h3>IntelliChat AI</h3>
+                    <p>
+                      Microservice-based AI orchestration platform with dynamic
+                      tool routing across RAG, web retrieval, and conversational
+                      services. BERT-driven intent classification with real-time
+                      prompt triage and multi-step reasoning chains.
+                    </p>
+                    <div class="work-stack">
+                      BERT · RAG · LLM · Spring Boot · Microservices
+                    </div>
+                    <a href="work/intellichat.html" class="work-case-link"
+                      >View Case Study <i class="bi bi-arrow-right"></i
+                    ></a>
+                  </div>
                 </div>
               </div>
 
-              <div class="col-lg-9">
-                <div
-                  class="row gy-4 portfolio-container isotope-container"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                >
-                  <div
-                    class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography"
-                  >
-                    <div class="portfolio-wrap">
-                      <img
-                        src="assets/img/portfolio/image3.png"
-                        class="img-fluid"
-                        alt="Portfolio Image"
-                        loading="lazy"
-                      />
-                      <div class="portfolio-info">
-                        <div class="content">
-                          <span class="category">LLM</span>
-                          <h4>Intelli Chat AI</h4>
-                          <div class="portfolio-links">
-                            <a
-                              href="assets/img/portfolio/image3.png"
-                              class="glightbox"
-                              title="Capturing Moments"
-                              ><i class="bi bi-plus-lg"></i
-                            ></a>
-                            <a
-                              href="https://github.com/AYON-ARYAN/INTELLI-CHAT-AI"
-                              title="More Details"
-                              ><i class="bi bi-arrow-right"></i
-                            ></a>
-                          </div>
-                        </div>
-                      </div>
+              <!-- 2. Graph RAG -->
+              <div
+                class="col-lg-6 portfolio-item isotope-item cat-ai"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="work-card">
+                  <div class="work-img">
+                    <img
+                      src="assets/img/portfolio/proj-graphrag.png"
+                      alt="GraphRAG"
+                      loading="lazy"
+                    />
+                    <div class="work-overlay">
+                      <a
+                        href="assets/img/portfolio/proj-graphrag.png"
+                        class="glightbox"
+                        ><i class="bi bi-arrows-fullscreen"></i
+                      ></a>
+                      <a
+                        href="https://github.com/AYON-ARYAN/graph-rag"
+                        target="_blank"
+                        ><i class="bi bi-github"></i
+                      ></a>
                     </div>
                   </div>
-                  <!-- End Portfolio Item -->
-
-                  <div
-                    class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design"
-                  >
-                    <div class="portfolio-wrap">
-                      <img
-                        src="assets/img/portfolio/image2.png"
-                        class="img-fluid"
-                        alt="Portfolio Image"
-                        loading="lazy"
-                      />
-                      <div class="portfolio-info">
-                        <div class="content">
-                          <span class="category">Micro Controllers</span>
-                          <h4>Glucose level Detector</h4>
-                          <div class="portfolio-links">
-                            <a
-                              href="assets/img/portfolio/image2.png"
-                              class="glightbox"
-                              title="Woodcraft Design"
-                              ><i class="bi bi-plus-lg"></i
-                            ></a>
-                            <a
-                              href="https://github.com/AYON-ARYAN/GLUCOSENCE"
-                              title="More Details"
-                              ><i class="bi bi-arrow-right"></i
-                            ></a>
-                          </div>
-                        </div>
-                      </div>
+                  <div class="work-detail">
+                    <span class="work-category"
+                      >AI · Knowledge Infrastructure</span
+                    >
+                    <h3>GraphRAG</h3>
+                    <p>
+                      Hybrid retrieval architecture combining NetworkX knowledge
+                      graph traversal with FAISS vector similarity search and
+                      Groq LLM inference. Interactive D3.js topology
+                      visualization with document ingestion and semantic
+                      chunking.
+                    </p>
+                    <div class="work-stack">
+                      NetworkX · FAISS · Groq · D3.js · Flask
                     </div>
+                    <a href="work/graphrag.html" class="work-case-link"
+                      >View Case Study <i class="bi bi-arrow-right"></i
+                    ></a>
                   </div>
-                  <!-- End Portfolio Item -->
-
-                  <div
-                    class="col-lg-6 col-md-6 portfolio-item isotope-item filter-automotive"
-                  >
-                    <div class="portfolio-wrap">
-                      <img
-                        src="assets/img/portfolio/image5.png"
-                        class="img-fluid"
-                        alt="Portfolio Image"
-                        loading="lazy"
-                      />
-                      <div class="portfolio-info">
-                        <div class="content">
-                          <span class="category">Data Science</span>
-                          <h4>Movie Recommendation System</h4>
-                          <div class="portfolio-links">
-                            <a
-                              href="assets/img/portfolio/image5.png"
-                              class="glightbox"
-                              title="Movie Recommendation System"
-                              ><i class="bi bi-plus-lg"></i
-                            ></a>
-                            <a
-                              href="https://github.com/AYON-ARYAN/Movie_Reccomendation_System"
-                              title="More Details"
-                              ><i class="bi bi-arrow-right"></i
-                            ></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End Portfolio Item -->
-
-                  <div
-                    class="col-lg-6 col-md-6 portfolio-item isotope-item filter-nature"
-                  >
-                    <div class="portfolio-wrap">
-                      <img
-                        src="assets/img/portfolio/image4.png"
-                        class="img-fluid"
-                        alt="Portfolio Image"
-                        loading="lazy"
-                      />
-                      <div class="portfolio-info">
-                        <div class="content">
-                          <span class="category">Data Science</span>
-                          <h4>Delhi Climate Analysis</h4>
-                          <div class="portfolio-links">
-                            <a
-                              href="assets/img/portfolio/image4.png"
-                              class="glightbox"
-                              title="Delhi Climate Analysis"
-                              ><i class="bi bi-plus-lg"></i
-                            ></a>
-                            <a
-                              href="https://github.com/AYON-ARYAN/DELHI-WEATHER-ANALYSIS"
-                              title="More Details"
-                              ><i class="bi bi-arrow-right"></i
-                            ></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End Portfolio Item -->
-
-                  <div
-                    class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography"
-                  >
-                    <div class="portfolio-wrap">
-                      <img
-                        src="assets/img/portfolio/image6.png"
-                        class="img-fluid"
-                        alt="Portfolio Image"
-                        loading="lazy"
-                      />
-                      <div class="portfolio-info">
-                        <div class="content">
-                          <span class="category">Photography</span>
-                          <h4>BlockChain Voting System</h4>
-                          <div class="portfolio-links">
-                            <a
-                              href="assets/img/portfolio/image6.png"
-                              class="glightbox"
-                              title="BlockChain Voting System"
-                              ><i class="bi bi-plus-lg"></i
-                            ></a>
-                            <a
-                              href="https://github.com/AYON-ARYAN/Blackchain-Voting-System"
-                              title="More Details"
-                              ><i class="bi bi-arrow-right"></i
-                            ></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End Portfolio Item -->
-
-                  <div
-                    class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design"
-                  >
-                    <div class="portfolio-wrap">
-                      <img
-                        src="assets/img/portfolio/image7.png"
-                        class="img-fluid"
-                        alt="Portfolio Image"
-                        loading="lazy"
-                      />
-                      <div class="portfolio-info">
-                        <div class="content">
-                          <span class="category">null</span>
-                          <h4>Math Ability</h4>
-                          <div class="portfolio-links">
-                            <a
-                              href="assets/img/portfolio/image7.png"
-                              class="glightbox"
-                              title="Math Ability"
-                              ><i class="bi bi-plus-lg"></i
-                            ></a>
-                            <a
-                              href="https://github.com/AYON-ARYAN/MATHS_GAME_USING_FLASK"
-                              title="More Details"
-                              ><i class="bi bi-arrow-right"></i
-                            ></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End Portfolio Item -->
                 </div>
-                <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-llm">
-                    <div class="portfolio-wrap">
-                      <img
-                        src="assets/img/portfolio/image9.png"
-                        class="img-fluid"
-                        alt="AI Database Manager"
-                        loading="lazy"
-                      />
-                      <div class="portfolio-info">
-                        <div class="content">
-                          <span class="category">LLM Systems</span>
-                          <h4>AI Database Manager</h4>
-                          <p style="font-size: 14px;">
-                            Local LLM-powered tool to interact with SQLite databases using natural language.
-                            Supports safe CRUD operations, SQL review, undo, and works fully offline.
-                          </p>
-                          <div class="portfolio-links">
-                            <a
-                              href="assets/img/portfolio/image9.png"
-                              class="glightbox"
-                              title="AI Database Manager – Local LLM Powered"
-                            >
-                              <i class="bi bi-plus-lg"></i>
-                            </a>
-                            <a
-                              href="https://github.com/AYON-ARYAN/DATABASE-MANAGER"
-                              title="View Project"
-                            >
-                              <i class="bi bi-arrow-right"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End Portfolio Item --> 
-                   <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-ai">
-                    <div class="portfolio-wrap">
-                      <img
-                        src="assets/img/portfolio/image8.png"
-                        class="img-fluid"
-                        alt="Offline Voice Assistant for macOS"
-                        loading="lazy"
-                      />
-                      <div class="portfolio-info">
-                        <div class="content">
-                          <span class="category">AI Systems</span>
-                          <h4>Offline Voice Assistant (macOS)</h4>
-                          <p style="font-size: 14px;">
-                            Fully offline, Siri-like voice assistant for Apple Silicon Macs.
-                            Uses on-device speech recognition, local LLMs, and native TTS with a
-                            minimal floating UI and multi-turn conversation memory.
-                          </p>
-                          <div class="portfolio-links">
-                            <a
-                              href="assets/img/portfolio/image8.png"
-                              class="glightbox"
-                              title="Offline Voice Assistant for macOS"
-                            >
-                              <i class="bi bi-plus-lg"></i>
-                            </a>
-                            <a
-                              href="https://github.com/AYON-ARYAN/PERSONAL_ASSISTANT"
-                              title="View Project"
-                            >
-                              <i class="bi bi-arrow-right"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              </div>
 
-                <!-- End Portfolio Container -->
+              <!-- 3. Legal AI LLM -->
+              <div
+                class="col-lg-6 portfolio-item isotope-item cat-ai"
+                data-aos="fade-up"
+              >
+                <div class="work-card">
+                  <div class="work-img">
+                    <img
+                      src="assets/img/portfolio/proj-legalai.png"
+                      alt="Legal AI"
+                      loading="lazy"
+                    />
+                    <div class="work-overlay">
+                      <a
+                        href="assets/img/portfolio/proj-legalai.png"
+                        class="glightbox"
+                        ><i class="bi bi-arrows-fullscreen"></i
+                      ></a>
+                      <a
+                        href="https://github.com/AYON-ARYAN/LEGAL-AI-LLM"
+                        target="_blank"
+                        ><i class="bi bi-github"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="work-detail">
+                    <span class="work-category">AI · Legal Domain</span>
+                    <h3>Legal AI LLM</h3>
+                    <p>
+                      Domain-specific large language model engineered for legal
+                      corpus analysis. PromptGuard V2 integration for
+                      adversarial prompt injection defense. RAG architecture
+                      with contextual grounding and hallucination mitigation.
+                    </p>
+                    <div class="work-stack">
+                      LLM · RAG · PromptGuard V2 · ChromaDB
+                    </div>
+                    <a href="work/legal-ai.html" class="work-case-link"
+                      >View Case Study <i class="bi bi-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4. AI Database Manager -->
+              <div
+                class="col-lg-6 portfolio-item isotope-item cat-ai"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="work-card">
+                  <div class="work-img">
+                    <img
+                      src="assets/img/portfolio/proj-dbmanager.png"
+                      alt="AI Database Manager"
+                      loading="lazy"
+                    />
+                    <div class="work-overlay">
+                      <a
+                        href="assets/img/portfolio/proj-dbmanager.png"
+                        class="glightbox"
+                        ><i class="bi bi-arrows-fullscreen"></i
+                      ></a>
+                      <a
+                        href="https://github.com/AYON-ARYAN/DATABASE-MANAGER"
+                        target="_blank"
+                        ><i class="bi bi-github"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="work-detail">
+                    <span class="work-category">LLM · Query Generation</span>
+                    <h3>AI Database Manager</h3>
+                    <p>
+                      Natural language to SQL transpilation via locally hosted
+                      Mistral inference (Ollama). Schema-aware prompt
+                      engineering with SQL validation, snapshot-based rollback,
+                      and human-in-the-loop execution gates.
+                    </p>
+                    <div class="work-stack">
+                      Ollama · Mistral · SQLite · Python
+                    </div>
+                    <a href="work/database-manager.html" class="work-case-link"
+                      >View Case Study <i class="bi bi-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5. Offline Voice Assistant -->
+              <div
+                class="col-lg-6 portfolio-item isotope-item cat-ai"
+                data-aos="fade-up"
+              >
+                <div class="work-card">
+                  <div class="work-img">
+                    <img
+                      src="assets/img/portfolio/proj-voiceai.png"
+                      alt="Voice Intelligence"
+                      loading="lazy"
+                    />
+                    <div class="work-overlay">
+                      <a
+                        href="assets/img/portfolio/proj-voiceai.png"
+                        class="glightbox"
+                        ><i class="bi bi-arrows-fullscreen"></i
+                      ></a>
+                      <a
+                        href="https://github.com/AYON-ARYAN/PERSONAL_ASSISTANT"
+                        target="_blank"
+                        ><i class="bi bi-github"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="work-detail">
+                    <span class="work-category">AI · On-Device</span>
+                    <h3>Offline Voice Intelligence</h3>
+                    <p>
+                      Fully offline conversational AI for Apple Silicon. Local
+                      speech-to-text pipeline, on-device LLM inference,
+                      multi-turn conversation state management. Zero cloud
+                      dependency — complete air-gapped intelligence.
+                    </p>
+                    <div class="work-stack">
+                      Speech Recognition · Local LLM · macOS · Python
+                    </div>
+                    <a href="work/voice-ai.html" class="work-case-link"
+                      >View Case Study <i class="bi bi-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 6. Image Resolution Enhancer -->
+              <div
+                class="col-lg-6 portfolio-item isotope-item cat-ml"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="work-card">
+                  <div class="work-img">
+                    <img
+                      src="assets/img/portfolio/proj-superres.png"
+                      alt="Super-Resolution"
+                      loading="lazy"
+                    />
+                    <div class="work-overlay">
+                      <a
+                        href="assets/img/portfolio/proj-superres.png"
+                        class="glightbox"
+                        ><i class="bi bi-arrows-fullscreen"></i
+                      ></a>
+                      <a
+                        href="https://github.com/AYON-ARYAN/Image-Resolutiom-Enhancer"
+                        target="_blank"
+                        ><i class="bi bi-github"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="work-detail">
+                    <span class="work-category"
+                      >Deep Learning · Generative</span
+                    >
+                    <h3>Image Super-Resolution</h3>
+                    <p>
+                      Fine-tuned Real-ESRGAN architecture via transfer learning
+                      with custom composite loss balancing on paired
+                      high-resolution/low-resolution datasets. Production-grade
+                      upscaling pipeline.
+                    </p>
+                    <div class="work-stack">
+                      Real-ESRGAN · PyTorch · Transfer Learning · GANs
+                    </div>
+                    <a href="work/super-resolution.html" class="work-case-link"
+                      >View Case Study <i class="bi bi-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 7. Brain Tumor Segmentation -->
+              <div
+                class="col-lg-6 portfolio-item isotope-item cat-ml"
+                data-aos="fade-up"
+              >
+                <div class="work-card">
+                  <div class="work-img">
+                    <img
+                      src="assets/img/portfolio/proj-braintumor.png"
+                      alt="Medical Imaging"
+                      loading="lazy"
+                    />
+                    <div class="work-overlay">
+                      <a
+                        href="assets/img/portfolio/proj-braintumor.png"
+                        class="glightbox"
+                        ><i class="bi bi-arrows-fullscreen"></i
+                      ></a>
+                      <a
+                        href="https://github.com/AYON-ARYAN/Brain-Tumor-Segmentation"
+                        target="_blank"
+                        ><i class="bi bi-github"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="work-detail">
+                    <span class="work-category">Medical AI · Segmentation</span>
+                    <h3>Brain Tumor Segmentation</h3>
+                    <p>
+                      U-Net encoder-decoder architecture for pixel-level
+                      semantic segmentation of brain tumors from MRI volumes.
+                      Precision lesion boundary delineation with multi-class
+                      tissue classification.
+                    </p>
+                    <div class="work-stack">
+                      U-Net · TensorFlow · Medical Imaging · Kaggle
+                    </div>
+                    <a href="work/brain-tumor.html" class="work-case-link"
+                      >View Case Study <i class="bi bi-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 8. Geo GPS Camera -->
+              <div
+                class="col-lg-6 portfolio-item isotope-item cat-mobile"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="work-card">
+                  <div class="work-img">
+                    <img
+                      src="assets/img/portfolio/proj-geogps.png"
+                      alt="Geo GPS Camera"
+                      loading="lazy"
+                    />
+                    <div class="work-overlay">
+                      <a
+                        href="assets/img/portfolio/proj-geogps.png"
+                        class="glightbox"
+                        ><i class="bi bi-arrows-fullscreen"></i
+                      ></a>
+                      <a
+                        href="https://github.com/AYON-ARYAN/GEO_LOCATION_SAVER_APP"
+                        target="_blank"
+                        ><i class="bi bi-github"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="work-detail">
+                    <span class="work-category">Android · Production</span>
+                    <h3>Geo GPS Camera</h3>
+                    <p>
+                      Production Android application with verified Play Store
+                      distribution. Secure location-tagged image acquisition
+                      with server-side GPS coordinate validation and spoofing
+                      detection infrastructure.
+                    </p>
+                    <div class="work-stack">
+                      Kotlin · Jetpack Compose · CameraX · Maps SDK
+                    </div>
+                    <a href="work/geo-gps.html" class="work-case-link"
+                      >View Case Study <i class="bi bi-arrow-right"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 9. Blockchain Voting -->
+              <div
+                class="col-lg-6 portfolio-item isotope-item cat-other"
+                data-aos="fade-up"
+              >
+                <div class="work-card">
+                  <div class="work-img">
+                    <img
+                      src="assets/img/portfolio/proj-blockchain.png"
+                      alt="Blockchain Voting"
+                      loading="lazy"
+                    />
+                    <div class="work-overlay">
+                      <a
+                        href="assets/img/portfolio/proj-blockchain.png"
+                        class="glightbox"
+                        ><i class="bi bi-arrows-fullscreen"></i
+                      ></a>
+                      <a
+                        href="https://github.com/AYON-ARYAN/Blackchain-Voting-System"
+                        target="_blank"
+                        ><i class="bi bi-github"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="work-detail">
+                    <span class="work-category">Blockchain · Governance</span>
+                    <h3>Decentralized Voting Protocol</h3>
+                    <p>
+                      Tamper-proof electoral system on Ethereum smart contracts.
+                      Immutable ballot recording, transparent audit trails, and
+                      decentralized consensus verification via Web3.js
+                      interface.
+                    </p>
+                    <div class="work-stack">
+                      Solidity · Web3.js · Ethereum · Smart Contracts
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 10. Glucosence -->
+              <div
+                class="col-lg-6 portfolio-item isotope-item cat-other"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="work-card">
+                  <div class="work-img">
+                    <img
+                      src="assets/img/portfolio/proj-glucosence.png"
+                      alt="Glucosence"
+                      loading="lazy"
+                    />
+                    <div class="work-overlay">
+                      <a
+                        href="assets/img/portfolio/proj-glucosence.png"
+                        class="glightbox"
+                        ><i class="bi bi-arrows-fullscreen"></i
+                      ></a>
+                      <a
+                        href="https://github.com/AYON-ARYAN/GLUCOSENCE"
+                        target="_blank"
+                        ><i class="bi bi-github"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="work-detail">
+                    <span class="work-category">IoT · Biomedical</span>
+                    <h3>Glucosence</h3>
+                    <p>
+                      Non-invasive glucose concentration monitoring via
+                      saliva-based biosensor input. Embedded C++ firmware with
+                      custom analog sensor integration, real-time telemetry
+                      display, and calibration routines.
+                    </p>
+                    <div class="work-stack">
+                      C++ · Arduino · Biosensors · Embedded Systems
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 11. Movie Recommendation -->
+              <div
+                class="col-lg-6 portfolio-item isotope-item cat-ml cat-other"
+                data-aos="fade-up"
+              >
+                <div class="work-card">
+                  <div class="work-img">
+                    <img
+                      src="assets/img/portfolio/proj-movierec.png"
+                      alt="Recommendation Engine"
+                      loading="lazy"
+                    />
+                    <div class="work-overlay">
+                      <a
+                        href="assets/img/portfolio/proj-movierec.png"
+                        class="glightbox"
+                        ><i class="bi bi-arrows-fullscreen"></i
+                      ></a>
+                      <a
+                        href="https://github.com/AYON-ARYAN/Movie_Reccomendation_System"
+                        target="_blank"
+                        ><i class="bi bi-github"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="work-detail">
+                    <span class="work-category">Data Engineering</span>
+                    <h3>Recommendation Engine</h3>
+                    <p>
+                      Content-based and collaborative filtering recommendation
+                      system with feature extraction, similarity computation,
+                      and real-time inference pipeline served via Flask API.
+                    </p>
+                    <div class="work-stack">
+                      Python · scikit-learn · Flask · Pandas
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 12. Fake News Detector -->
+              <div
+                class="col-lg-6 portfolio-item isotope-item cat-ml"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="work-card">
+                  <div class="work-img">
+                    <img
+                      src="assets/img/portfolio/proj-fakenews.png"
+                      alt="Credibility Analysis"
+                      loading="lazy"
+                    />
+                    <div class="work-overlay">
+                      <a
+                        href="assets/img/portfolio/proj-fakenews.png"
+                        class="glightbox"
+                        ><i class="bi bi-arrows-fullscreen"></i
+                      ></a>
+                      <a
+                        href="https://github.com/AYON-ARYAN/Fake-News-Check"
+                        target="_blank"
+                        ><i class="bi bi-github"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="work-detail">
+                    <span class="work-category">NLP · Classification</span>
+                    <h3>Credibility Analysis Engine</h3>
+                    <p>
+                      NLP-driven news credibility classification system with
+                      TF-IDF vectorization, ensemble classification models, and
+                      real-time inference API for editorial verification
+                      workflows.
+                    </p>
+                    <div class="work-stack">
+                      NLP · scikit-learn · Flask · TF-IDF
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- /Portfolio Section -->
 
-      <!-- Services Section -->
-     <section id="services" class="services section">
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>What I Do</h2>
-    <p>
-      Here's a glimpse into the areas I love working in — from building native Android apps to exploring AI and low-level systems programming.
-    </p>
-  </div>
-  <!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="service-header">
-      <div class="row align-items-center">
-        <div class="col-lg-8 col-md-12">
-          <div class="service-intro">
-            <h2 class="service-heading">
-              <div>Skills That Drive</div>
-              <div><span>Real-World Solutions</span></div>
-            </h2>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-12">
-          <div class="service-summary">
-            <p>
-              I bring a mix of creativity and engineering to every project I take on — always learning, always building, and always ready for the next challenge.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row justify-content-center">
-      <!-- Android Development -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-phone"></i>
-          </div>
-          <h3><a href="#">Native <span>Android Development</span></a></h3>
-          <p>
-            Building clean, high-performance Android apps using Java and XML. Experienced with Android Studio, API integration, and real-world debugging.
-          </p>
-        </div>
-      </div>
-
-      <!-- AI & ML -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-cpu"></i>
-          </div>
-          <h3><a href="#">AI & <span>ML Integration</span></a></h3>
-          <p>
-            Leveraging machine learning models in mobile and web apps — including image quality checking and prediction tasks using TensorFlow Lite.
-          </p>
-        </div>
-      </div>
-
-      <!-- Web Development -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-globe"></i>
-          </div>
-          <h3><a href="#">Frontend <span>Web Projects</span></a></h3>
-          <p>
-            Creating responsive websites with HTML, CSS, JavaScript, React, Next.js, and Tailwind CSS — perfect for portfolios, dashboards, and mini apps.
-          </p>
-        </div>
-      </div>
-
-      <!-- System Programming -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-terminal"></i>
-          </div>
-          <h3><a href="#">System <span>Programming</span></a></h3>
-          <p>
-            Skilled in C/C++ with a strong grasp of memory management, pointers, and OS-level operations — building efficient system tools and CLI utilities.
-          </p>
-        </div>
-      </div>
-
-      <!-- Data & Statistics -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-bar-chart-line"></i>
-          </div>
-          <h3><a href="#">Data & <span>Statistics</span></a></h3>
-          <p>
-            Turning raw data into insight with statistical analysis and visualizations. Comfortable with data preprocessing, EDA, and basic ML modeling.
-          </p>
-        </div>
-      </div>
-
-      <!-- Tech Exploration -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-lightbulb"></i>
-          </div>
-          <h3><a href="#">Tech <span>Exploration</span></a></h3>
-          <p>
-            Always experimenting with new ideas — from IoT to generative AI — and building prototypes that push the boundaries of what's possible.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-      <!-- /Services Section -->
-
-     
-      <!-- Contact Section -->
-      <section id="contact" class="contact section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Contact</h2>
-          <p>
-           Feel free to drop a message — I’m just a click away!
-          </p>
-        </div>
-        <!-- End Section Title -->
-
+      <!-- ===== CONTACT ===== -->
+      <section id="contact" class="section">
         <div class="container">
-          <div class="row g-4 g-lg-5">
-            <div class="col-lg-5">
-              <div class="info-box">
-                <h3>Contact Info</h3>
-                <p>
-                Got a project idea, a question, or just want to say hi? Feel free to reach out — I'm always open to new opportunities and collaborations!
-
-                </p>
-
-                <div class="info-item">
-                  <div class="icon-box">
-                    <i class="bi bi-geo-alt"></i>
-                  </div>
-                  <div class="content">
-                    <h4>My Location</h4>
-                    <p>Main Road Nayachak</p>
-                    <p>Khemnichak, Patna 800027</p>
-                  </div>
-                </div>
-
-                <div class="info-item">
-                  <div class="icon-box">
-                    <i class="bi bi-telephone"></i>
-                  </div>
-                  <div class="content">
-                    <h4>Phone Number</h4>
-                    <p>+91 7991126269</p>
-                    <p>+91 9973159969</p>
-                  </div>
-                </div>
-
-                <div class="info-item">
-                  <div class="icon-box">
-                    <i class="bi bi-envelope"></i>
-                  </div>
-                  <div class="content">
-                    <h4>Email Address</h4>
-                    <p>ayonaryan5@gmail.com</p>
-                    <p>ayonaryan5@outlook.com</p>
-                  </div>
-                </div>
+          <div class="row g-5">
+            <div class="col-lg-6" data-aos="fade-up">
+              <p class="section-eyebrow">Contact</p>
+              <h2 class="section-title">
+                Let's engineer<br /><em>something remarkable.</em>
+              </h2>
+              <p class="body-text">
+                Whether it's production AI infrastructure, a native application,
+                or an ambitious technical challenge — I welcome conversations
+                that lead to exceptional engineering outcomes.
+              </p>
+              <div class="contact-links">
+                <a href="mailto:ayonaryan5@gmail.com" class="contact-link">
+                  <i class="bi bi-envelope"></i>
+                  <span>ayonaryan5@gmail.com</span>
+                </a>
+                <a href="tel:+917991126269" class="contact-link">
+                  <i class="bi bi-telephone"></i>
+                  <span>+91 7991126269</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/ayon-aryan-917078238/"
+                  target="_blank"
+                  class="contact-link"
+                >
+                  <i class="bi bi-linkedin"></i>
+                  <span>LinkedIn</span>
+                </a>
+                <a
+                  href="https://github.com/AYON-ARYAN"
+                  target="_blank"
+                  class="contact-link"
+                >
+                  <i class="bi bi-github"></i>
+                  <span>GitHub</span>
+                </a>
               </div>
             </div>
-
-            <div class="col-lg-7">
-              <div class="contact-form">
-                <h3>Get In Touch</h3>
-                <p>
-                Whether it’s feedback, collaboration, or a freelance opportunity — drop me a message and I’ll get back to you soon!
-                </p>
-<form action="https://formsubmit.co/ayonaryan5@gmail.com" method="POST">
-  <!-- Disable CAPTCHA and redirect to a thank-you message -->
-  <input type="hidden" name="_captcha" value="false" />
-  <input type="hidden" name="_next" value="https://yourusername.github.io/thankyou.html" />
-
-  <div class="row gy-4">
-    <div class="col-md-6">
-      <input type="text" name="name" class="form-control" placeholder="Your Name" required />
-    </div>
-
-    <div class="col-md-6">
-      <input type="email" class="form-control" name="email" placeholder="Your Email" required />
-    </div>
-
-    <div class="col-12">
-      <input type="text" class="form-control" name="subject" placeholder="Subject" required />
-    </div>
-
-    <div class="col-12">
-      <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-    </div>
-
-    <div class="col-12 text-center">
-      <button type="submit" class="btn">Send Message</button>
-    </div>
-  </div>
-</form>
-
-                
-
-                    
-              </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+              <form
+                action="https://formsubmit.co/ayonaryan5@gmail.com"
+                method="POST"
+                class="contact-form"
+              >
+                <input type="hidden" name="_captcha" value="false" />
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://ayonaryan.github.io/"
+                />
+                <div class="form-group">
+                  <input type="text" name="name" placeholder="Name" required />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    name="message"
+                    rows="4"
+                    placeholder="Message"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn-gold">Send Message</button>
+              </form>
             </div>
           </div>
         </div>
       </section>
-      <!-- /Contact Section -->
     </main>
 
-    <footer id="footer" class="footer position-relative">
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
       <div class="container">
-        <div class="copyright text-center">
-          <p>
-            © <span>Copyright</span>
-            <strong class="px-1 sitename">Ayon Aryan</strong>
-            <span>All Rights Reserved</span>
-          </p>
-        </div>
-        <div class="credits">
-          Designed by Aishwarya Aryan
+        <div class="footer-inner">
+          <span class="footer-logo">Ayon Aryan</span>
+          <p>&copy; 2025 · Engineered with precision.</p>
+          <div class="footer-links">
+            <a href="https://github.com/AYON-ARYAN" target="_blank"
+              ><i class="bi bi-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/ayon-aryan-917078238/"
+              target="_blank"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            <a href="https://www.instagram.com/ayon_aryan5/" target="_blank"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </div>
         </div>
       </div>
     </footer>
 
-    <!-- Scroll Top -->
-    <a
-      href="#"
-      id="scroll-top"
-      class="scroll-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
+    <a href="#" id="scroll-top" class="scroll-top-btn"
+      ><i class="bi bi-chevron-up"></i
     ></a>
-
-    <!-- Preloader -->
     <div id="preloader"></div>
 
-    <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/typed.js/typed.umd.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
   </body>
 </html>

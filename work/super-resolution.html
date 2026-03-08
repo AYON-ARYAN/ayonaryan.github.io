@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Image Super-Resolution — Ayon Aryan</title>
+    <meta
+      name="description"
+      content="Case study: Real-ESRGAN fine-tuning for production image super-resolution."
+    />
+    <link href="../assets/img/profile/logo.png" rel="icon" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <a href="../index.html" class="nav-logo">Ayon Aryan</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#expertise">Expertise</a></li>
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <a href="../assets/img/profile/MyCv.pdf" class="nav-cta" target="_blank"
+          >Résumé</a
+        ><button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <main>
+      <section class="case-hero">
+        <div class="container">
+          <a href="../index.html#work" class="back-link" data-aos="fade-up"
+            ><i class="bi bi-arrow-left"></i> All Work</a
+          >
+          <p class="section-eyebrow" data-aos="fade-up">
+            Deep Learning · Generative
+          </p>
+          <h1 class="case-title" data-aos="fade-up">Image Super-Resolution</h1>
+          <p class="case-subtitle" data-aos="fade-up">
+            Fine-tuned Real-ESRGAN architecture via transfer learning for
+            production-grade image upscaling with custom composite loss
+            functions.
+          </p>
+          <div class="case-meta" data-aos="fade-up">
+            <div class="case-meta-item">
+              <span class="case-meta-label">Role</span
+              ><span class="case-meta-value">Lead Researcher</span>
+            </div>
+            <div class="case-meta-item">
+              <span class="case-meta-label">Stack</span
+              ><span class="case-meta-value"
+                >Real-ESRGAN · PyTorch · Transfer Learning · GANs</span
+              >
+            </div>
+            <div class="case-meta-item">
+              <span class="case-meta-label">Repository</span
+              ><span class="case-meta-value"
+                ><a
+                  href="https://github.com/AYON-ARYAN/Image-Resolutiom-Enhancer"
+                  target="_blank"
+                  >GitHub ↗</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="case-hero-img" data-aos="fade-up">
+        <img
+          src="../assets/img/portfolio/proj-superres.png"
+          alt="Super-Resolution"
+        />
+      </div>
+
+      <section class="case-section">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <p class="section-eyebrow">The Challenge</p>
+              <h2 class="case-heading">
+                Perceptual<br /><em>reconstruction.</em>
+              </h2>
+            </div>
+            <div class="col-lg-8">
+              <p class="body-text">
+                Upscaling low-resolution images with traditional interpolation
+                produces blurred, artifact-laden results. Generative adversarial
+                networks offer superior perceptual quality, but pre-trained
+                models optimized for general imagery often underperform on
+                domain-specific content. The challenge was to fine-tune
+                Real-ESRGAN on custom paired datasets while balancing
+                pixel-level accuracy against perceptual quality.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section section-dark">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <p class="section-eyebrow">The Architecture</p>
+              <h2 class="case-heading">GAN-based<br /><em>upscaling.</em></h2>
+            </div>
+            <div class="col-lg-8">
+              <div class="arch-list">
+                <div class="arch-item">
+                  <span class="expertise-number">01</span>
+                  <div>
+                    <h4>Real-ESRGAN Backbone</h4>
+                    <p>
+                      RRDB (Residual-in-Residual Dense Block) generator
+                      architecture pre-trained on large-scale image datasets.
+                      The discriminator uses a U-Net architecture with spectral
+                      normalization for stable adversarial training.
+                    </p>
+                  </div>
+                </div>
+                <div class="arch-item">
+                  <span class="expertise-number">02</span>
+                  <div>
+                    <h4>Transfer Learning Pipeline</h4>
+                    <p>
+                      Pre-trained weights frozen in early layers, with
+                      fine-tuning applied to later RRDB blocks and the SR
+                      reconstruction head. Custom paired HR-LR dataset curation
+                      with controlled degradation models.
+                    </p>
+                  </div>
+                </div>
+                <div class="arch-item">
+                  <span class="expertise-number">03</span>
+                  <div>
+                    <h4>Composite Loss Engineering</h4>
+                    <p>
+                      Multi-objective loss combining L1 pixel loss, VGG-based
+                      perceptual loss, and GAN adversarial loss. Loss weights
+                      tuned via ablation studies to balance reconstruction
+                      fidelity against perceptual sharpness.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <p class="section-eyebrow">The Outcome</p>
+              <h2 class="case-heading">
+                Artifact-free<br /><em>enhancement.</em>
+              </h2>
+            </div>
+            <div class="col-lg-8">
+              <p class="body-text">
+                The fine-tuned model generates perceptually superior upscaled
+                images with minimal artifacts. Transfer learning reduced
+                training time significantly compared to training from scratch,
+                while the composite loss function ensures outputs balance pixel
+                accuracy with visual naturalness. The pipeline is packaged for
+                inference-ready deployment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-nav">
+        <div class="container">
+          <div class="case-nav-inner">
+            <a href="voice-ai.html" class="case-nav-link"
+              ><span class="case-nav-label">Previous</span
+              ><span class="case-nav-title">← Voice Intelligence</span></a
+            >
+            <a href="brain-tumor.html" class="case-nav-link case-nav-next"
+              ><span class="case-nav-label">Next Project</span
+              ><span class="case-nav-title">Brain Tumor Segmentation →</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <span class="footer-logo">Ayon Aryan</span>
+          <p>&copy; 2025 · Engineered with precision.</p>
+          <div class="footer-links">
+            <a href="https://github.com/AYON-ARYAN" target="_blank"
+              ><i class="bi bi-github"></i></a
+            ><a
+              href="https://www.linkedin.com/in/ayon-aryan-917078238/"
+              target="_blank"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,229 +1,220 @@
 /**
-* Template Name: SnapFolio
-* Template URL: https://bootstrapmade.com/snapfolio-bootstrap-portfolio-template/
-* Updated: Jun 13 2025 with Bootstrap v5.3.6
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ * Ayon Aryan — Personal Portfolio
+ * Main JavaScript
+ */
 
-(function() {
+(function () {
   "use strict";
 
-  /**
-   * Header toggle
-   */
-  const headerToggleBtn = document.querySelector('.header-toggle');
-
-  function headerToggle() {
-    document.querySelector('#header').classList.toggle('header-show');
-    headerToggleBtn.classList.toggle('bi-list');
-    headerToggleBtn.classList.toggle('bi-x');
-  }
-  headerToggleBtn.addEventListener('click', headerToggle);
-
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.header-show')) {
-        headerToggle();
-      }
-    });
-
-  });
-
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
-    });
-  });
-
-  /**
-   * Preloader
-   */
-  const preloader = document.querySelector('#preloader');
+  /* ========== PRELOADER ========== */
+  const preloader = document.getElementById("preloader");
   if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove();
+    window.addEventListener("load", () => {
+      preloader.style.opacity = "0";
+      preloader.style.visibility = "hidden";
+      setTimeout(() => preloader.remove(), 500);
     });
   }
 
-  /**
-   * Scroll top button
-   */
-  let scrollTop = document.querySelector('.scroll-top');
+  /* ========== NAVBAR — SCROLL HIDE/SHOW ========== */
+  const navbar = document.getElementById("navbar");
+  let lastScrollY = 0;
+  let ticking = false;
 
-  function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+  function updateNavbar() {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > lastScrollY && currentScrollY > 200) {
+      navbar.classList.add("hidden");
+    } else {
+      navbar.classList.remove("hidden");
     }
-  }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
-
-  /**
-   * Animation on scroll function and init
-   */
-  function aosInit() {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
-  }
-  window.addEventListener('load', aosInit);
-
-  /**
-   * Init typed.js
-   */
-  const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
-    let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
-    });
+    lastScrollY = currentScrollY;
+    ticking = false;
   }
 
-  /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
+  document.addEventListener("scroll", () => {
+    if (!ticking) {
+      requestAnimationFrame(updateNavbar);
+      ticking = true;
+    }
+  });
 
-  /**
-   * Animate the skills items on reveal
-   */
-  let skillsAnimation = document.querySelectorAll('.skills-animation');
-  skillsAnimation.forEach((item) => {
-    new Waypoint({
-      element: item,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = item.querySelectorAll('.progress .progress-bar');
-        progress.forEach(el => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%';
-        });
-      }
+  /* ========== MOBILE NAV TOGGLE ========== */
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => {
+      navToggle.classList.toggle("active");
+      navLinks.classList.toggle("open");
     });
-  });
 
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
-
-  /**
-   * Init isotope layout and filters
-   */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
-    let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
-    let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
-    let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
-
-    let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
-      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-        itemSelector: '.isotope-item',
-        layoutMode: layout,
-        filter: filter,
-        sortBy: sort
+    // Close mobile nav on link click
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navToggle.classList.remove("active");
+        navLinks.classList.remove("open");
       });
     });
+  }
 
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-        this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        if (typeof aosInit === 'function') {
-          aosInit();
-        }
-      }, false);
-    });
-
-  });
-
-  /**
-   * Init swiper sliders
-   */
-  function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
-
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
+  /* ========== SCROLLSPY ========== */
+  const navAnchors = document.querySelectorAll(".nav-links a");
+  function scrollspy() {
+    const scrollPos = window.scrollY + 200;
+    navAnchors.forEach((link) => {
+      if (!link.hash) return;
+      const section = document.querySelector(link.hash);
+      if (!section) return;
+      if (
+        scrollPos >= section.offsetTop &&
+        scrollPos < section.offsetTop + section.offsetHeight
+      ) {
+        navAnchors.forEach((l) => l.classList.remove("active"));
+        link.classList.add("active");
       }
     });
   }
+  window.addEventListener("load", scrollspy);
+  document.addEventListener("scroll", scrollspy);
 
-  window.addEventListener("load", initSwiper);
+  /* ========== SCROLL TOP BUTTON ========== */
+  const scrollTopBtn = document.querySelector(".scroll-top-btn");
+  if (scrollTopBtn) {
+    function toggleScrollTop() {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.add("active");
+      } else {
+        scrollTopBtn.classList.remove("active");
+      }
+    }
 
-  /**
-   * Correct scrolling position upon page load for URLs containing hash links.
-   */
-  window.addEventListener('load', function(e) {
+    scrollTopBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    window.addEventListener("load", toggleScrollTop);
+    document.addEventListener("scroll", toggleScrollTop);
+  }
+
+  /* ========== CURSOR GLOW ========== */
+  const cursorGlow = document.getElementById("cursorGlow");
+  if (cursorGlow && window.innerWidth > 768) {
+    let mouseX = 0,
+      mouseY = 0;
+    let glowX = 0,
+      glowY = 0;
+
+    document.addEventListener("mousemove", (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cursorGlow.classList.add("active");
+    });
+
+    function animateGlow() {
+      glowX += (mouseX - glowX) * 0.08;
+      glowY += (mouseY - glowY) * 0.08;
+      cursorGlow.style.left = glowX + "px";
+      cursorGlow.style.top = glowY + "px";
+      requestAnimationFrame(animateGlow);
+    }
+    animateGlow();
+  }
+
+  /* ========== AOS INIT ========== */
+  window.addEventListener("load", () => {
+    if (typeof AOS !== "undefined") {
+      AOS.init({
+        duration: 700,
+        easing: "ease-out-cubic",
+        once: true,
+        offset: 60,
+      });
+    }
+  });
+
+  /* ========== TYPED.JS ========== */
+  window.addEventListener("load", () => {
+    const typedEl = document.querySelector(".typed");
+    if (typedEl && typeof Typed !== "undefined") {
+      const items = typedEl.getAttribute("data-typed-items").split(",");
+      new Typed(".typed", {
+        strings: items,
+        loop: true,
+        typeSpeed: 80,
+        backSpeed: 40,
+        backDelay: 2000,
+        showCursor: false,
+      });
+    }
+  });
+
+  /* ========== GLIGHTBOX ========== */
+  window.addEventListener("load", () => {
+    if (typeof GLightbox !== "undefined") {
+      GLightbox({ selector: ".glightbox" });
+    }
+  });
+
+  /* ========== ISOTOPE ========== */
+  window.addEventListener("load", () => {
+    document
+      .querySelectorAll(".isotope-layout")
+      .forEach(function (isotopeItem) {
+        const layout = isotopeItem.getAttribute("data-layout") || "masonry";
+        const filter = isotopeItem.getAttribute("data-default-filter") || "*";
+        const sort = isotopeItem.getAttribute("data-sort") || "original-order";
+
+        let iso;
+        if (
+          typeof imagesLoaded !== "undefined" &&
+          typeof Isotope !== "undefined"
+        ) {
+          imagesLoaded(
+            isotopeItem.querySelector(".isotope-container"),
+            function () {
+              iso = new Isotope(
+                isotopeItem.querySelector(".isotope-container"),
+                {
+                  itemSelector: ".isotope-item",
+                  layoutMode: layout,
+                  filter: filter,
+                  sortBy: sort,
+                },
+              );
+            },
+          );
+
+          isotopeItem
+            .querySelectorAll(".isotope-filters button")
+            .forEach(function (btn) {
+              btn.addEventListener("click", function () {
+                isotopeItem
+                  .querySelector(".isotope-filters .filter-active")
+                  .classList.remove("filter-active");
+                this.classList.add("filter-active");
+                if (iso) {
+                  iso.arrange({ filter: this.getAttribute("data-filter") });
+                }
+              });
+            });
+        }
+      });
+  });
+
+  /* ========== SMOOTH SCROLL FOR HASH LINKS ========== */
+  window.addEventListener("load", function () {
     if (window.location.hash) {
-      if (document.querySelector(window.location.hash)) {
+      const target = document.querySelector(window.location.hash);
+      if (target) {
         setTimeout(() => {
-          let section = document.querySelector(window.location.hash);
-          let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
           window.scrollTo({
-            top: section.offsetTop - parseInt(scrollMarginTop),
-            behavior: 'smooth'
+            top: target.offsetTop - 72,
+            behavior: "smooth",
           });
         }, 100);
       }
     }
   });
-
-  /**
-   * Navmenu Scrollspy
-   */
-  let navmenulinks = document.querySelectorAll('.navmenu a');
-
-  function navmenuScrollspy() {
-    navmenulinks.forEach(navmenulink => {
-      if (!navmenulink.hash) return;
-      let section = document.querySelector(navmenulink.hash);
-      if (!section) return;
-      let position = window.scrollY + 200;
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
-        navmenulink.classList.add('active');
-      } else {
-        navmenulink.classList.remove('active');
-      }
-    })
-  }
-  window.addEventListener('load', navmenuScrollspy);
-  document.addEventListener('scroll', navmenuScrollspy);
-
 })();

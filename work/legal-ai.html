@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Legal AI LLM — Ayon Aryan</title>
+    <meta
+      name="description"
+      content="Case study: Legal AI LLM — Domain-specific large language model with RAG and adversarial prompt defense."
+    />
+    <link href="../assets/img/profile/logo.png" rel="icon" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <a href="../index.html" class="nav-logo">Ayon Aryan</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#expertise">Expertise</a></li>
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <a href="../assets/img/profile/MyCv.pdf" class="nav-cta" target="_blank"
+          >Résumé</a
+        ><button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <main>
+      <section class="case-hero">
+        <div class="container">
+          <a href="../index.html#work" class="back-link" data-aos="fade-up"
+            ><i class="bi bi-arrow-left"></i> All Work</a
+          >
+          <p class="section-eyebrow" data-aos="fade-up">AI · Legal Domain</p>
+          <h1 class="case-title" data-aos="fade-up">Legal AI LLM</h1>
+          <p class="case-subtitle" data-aos="fade-up">
+            Domain-specific large language model engineered for legal corpus
+            analysis with adversarial robustness and hallucination mitigation.
+          </p>
+          <div class="case-meta" data-aos="fade-up">
+            <div class="case-meta-item">
+              <span class="case-meta-label">Role</span
+              ><span class="case-meta-value">AI Engineer — Broadrange AI</span>
+            </div>
+            <div class="case-meta-item">
+              <span class="case-meta-label">Stack</span
+              ><span class="case-meta-value"
+                >LLM · RAG · PromptGuard V2 · ChromaDB</span
+              >
+            </div>
+            <div class="case-meta-item">
+              <span class="case-meta-label">Repository</span
+              ><span class="case-meta-value"
+                ><a
+                  href="https://github.com/AYON-ARYAN/LEGAL-AI-LLM"
+                  target="_blank"
+                  >GitHub ↗</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="case-hero-img" data-aos="fade-up">
+        <img src="../assets/img/portfolio/proj-legalai.png" alt="Legal AI" />
+      </div>
+
+      <section class="case-section">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <p class="section-eyebrow">The Challenge</p>
+              <h2 class="case-heading">
+                Legal precision<br /><em>at scale.</em>
+              </h2>
+            </div>
+            <div class="col-lg-8">
+              <p class="body-text">
+                Legal professionals require AI systems that are simultaneously
+                precise, grounded in authoritative sources, and resilient
+                against adversarial manipulation. General-purpose LLMs
+                hallucinate legal citations, misinterpret jurisdictional
+                nuances, and remain vulnerable to prompt injection attacks that
+                could compromise confidential case information.
+              </p>
+              <p class="body-text">
+                The objective was to engineer a domain-restricted LLM system
+                that answers legal queries exclusively from verified document
+                corpus, cites sources accurately, and defends against
+                adversarial prompt manipulation — all while maintaining
+                sub-second response latency.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section section-dark">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <p class="section-eyebrow">The Architecture</p>
+              <h2 class="case-heading">
+                Adversarially<br /><em>hardened RAG.</em>
+              </h2>
+            </div>
+            <div class="col-lg-8">
+              <div class="arch-list">
+                <div class="arch-item">
+                  <span class="expertise-number">01</span>
+                  <div>
+                    <h4>Document Ingestion</h4>
+                    <p>
+                      Legal documents processed through a multi-stage pipeline:
+                      PDF extraction, section-aware chunking that respects
+                      clause boundaries, metadata tagging (jurisdiction, date,
+                      case type), and vector embedding via SambaNova
+                      infrastructure.
+                    </p>
+                  </div>
+                </div>
+                <div class="arch-item">
+                  <span class="expertise-number">02</span>
+                  <div>
+                    <h4>PromptGuard V2</h4>
+                    <p>
+                      Every incoming query passes through PromptGuard V2 — a
+                      classifier that detects prompt injection attempts,
+                      jailbreak patterns, and data exfiltration probes.
+                      Malicious prompts are rejected before reaching the LLM
+                      inference layer.
+                    </p>
+                  </div>
+                </div>
+                <div class="arch-item">
+                  <span class="expertise-number">03</span>
+                  <div>
+                    <h4>Retrieval-Augmented Generation</h4>
+                    <p>
+                      Queries trigger ChromaDB similarity search against the
+                      legal vector store. Retrieved chunks are ranked by
+                      relevance, concatenated with the query as grounding
+                      context, and fed to the LLM with strict instructions to
+                      only cite retrieved sources.
+                    </p>
+                  </div>
+                </div>
+                <div class="arch-item">
+                  <span class="expertise-number">04</span>
+                  <div>
+                    <h4>Hallucination Mitigation</h4>
+                    <p>
+                      Post-generation validation cross-references LLM outputs
+                      against the retrieved chunks. Ungrounded claims are
+                      flagged, and confidence scores accompany each response to
+                      signal reliability.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <p class="section-eyebrow">The Outcome</p>
+              <h2 class="case-heading">
+                Trusted<br /><em>legal intelligence.</em>
+              </h2>
+            </div>
+            <div class="col-lg-8">
+              <p class="body-text">
+                The system delivers grounded, source-cited legal responses with
+                adversarial prompt rejection. The PromptGuard V2 layer ensures
+                that no injection attack can bypass the retrieval-augmented
+                pipeline. Deployed on SambaNova infrastructure for reliable,
+                low-latency inference — making it viable for real-time legal
+                research workflows.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-nav">
+        <div class="container">
+          <div class="case-nav-inner">
+            <a href="graphrag.html" class="case-nav-link"
+              ><span class="case-nav-label">Previous</span
+              ><span class="case-nav-title">← GraphRAG</span></a
+            >
+            <a href="database-manager.html" class="case-nav-link case-nav-next"
+              ><span class="case-nav-label">Next Project</span
+              ><span class="case-nav-title">AI Database Manager →</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <span class="footer-logo">Ayon Aryan</span>
+          <p>&copy; 2025 · Engineered with precision.</p>
+          <div class="footer-links">
+            <a href="https://github.com/AYON-ARYAN" target="_blank"
+              ><i class="bi bi-github"></i></a
+            ><a
+              href="https://www.linkedin.com/in/ayon-aryan-917078238/"
+              target="_blank"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
