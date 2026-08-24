@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DriftBench — Ayon Aryan</title>
+    <meta
+      name="description"
+      content="Case study: a benchmark measuring whether AI coding agents silently break API contracts, and whether they launder the spec to hide it."
+    />
+    <link href="../assets/img/profile/logo.png" rel="icon" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <a href="../index.html" class="nav-logo">Ayon Aryan</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#credentials">Credentials</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <a href="../assets/img/profile/MyCv.pdf" class="nav-cta" target="_blank"
+          >Résumé</a
+        ><button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <main>
+      <section class="case-hero">
+        <div class="container">
+          <a href="../index.html#work" class="back-link"
+            >← All Work</a
+          >
+          <p class="section-eyebrow">
+            Research Benchmark · Agent Evaluation
+          </p>
+          <h1 class="case-title">DriftBench</h1>
+          <p class="case-subtitle">
+            A benchmark measuring whether AI coding agents silently break API
+            contracts — patches that pass every unit test while quietly
+            violating the service's published interface — and whether an
+            agent given write access to the spec launders it instead of
+            fixing its code.
+          </p>
+          <div class="case-meta">
+            <div class="case-meta-item">
+              <span class="case-meta-label">Role</span
+              ><span class="case-meta-value">Sole Researcher &amp; Engineer</span>
+            </div>
+            <div class="case-meta-item">
+              <span class="case-meta-label">Stack</span
+              ><span class="case-meta-value"
+                >Python · Specmatic · Ollama · Gemini API</span
+              >
+            </div>
+            <div class="case-meta-item">
+              <span class="case-meta-label">Repository</span
+              ><span class="case-meta-value"
+                ><a
+                  href="https://github.com/AYON-ARYAN/driftbench"
+                  target="_blank"
+                  >GitHub ↗</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="case-hero-img">
+        <img
+          src="../assets/img/portfolio/proj-driftbench.png"
+          alt="DriftBench — Silent Contract Breakage Rate benchmark"
+        />
+      </div>
+
+      <section class="case-section">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <p class="section-eyebrow">The Problem</p>
+              <h2 class="case-heading">
+                Passing tests<br /><em>isn't the contract.</em>
+              </h2>
+            </div>
+            <div class="col-lg-8">
+              <p class="body-text">
+                Every agent coding benchmark — SWE-bench and its successors
+                included — asks one question: did the unit tests pass? None
+                of them ask whether the patch still honors the service's
+                published OpenAPI contract. An agent can pass every test in
+                the suite while silently dropping an input validation,
+                changing a status code, or adding an undocumented response
+                field. That failure mode ships straight to production and the
+                first person to notice is whoever's downstream service breaks
+                on it. DriftBench measures that gap directly with a headline
+                metric — Silent Contract Breakage Rate (SCBR): the fraction
+                of test-passing runs that fail contract conformance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section section-dark">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <p class="section-eyebrow">The Design</p>
+              <h2 class="case-heading">
+                Three conditions,<br /><em>one confound removed.</em>
+              </h2>
+            </div>
+            <div class="col-lg-8">
+              <div class="arch-list">
+                <div class="arch-item">
+                  <span class="expertise-number">A</span>
+                  <div>
+                    <h4>Hidden — no spec visible</h4>
+                    <p>
+                      The agent never sees <code>openapi.yaml</code>. This is
+                      the baseline drift rate with zero contract awareness.
+                    </p>
+                  </div>
+                </div>
+                <div class="arch-item">
+                  <span class="expertise-number">B</span>
+                  <div>
+                    <h4>Read-only — spec visible, locked</h4>
+                    <p>
+                      The agent sees the contract but is instructed not to
+                      touch it. Tests whether visibility alone reduces drift.
+                    </p>
+                  </div>
+                </div>
+                <div class="arch-item">
+                  <span class="expertise-number">C</span>
+                  <div>
+                    <h4>Editable — the laundering condition</h4>
+                    <p>
+                      The agent has full write access to the spec. If its code
+                      fails the original contract, there's a shortcut
+                      available a test-only benchmark can't see: rewrite the
+                      spec to describe whatever the broken code actually does.
+                      DriftBench's D6 detector diffs the spec before and after
+                      every Condition-C run to catch exactly that.
+                    </p>
+                  </div>
+                </div>
+                <div class="arch-item">
+                  <span class="expertise-number">＋</span>
+                  <div>
+                    <h4>One scaffold, every model</h4>
+                    <p>
+                      Only the condition-specific paragraph of the system
+                      prompt changes. Scaffold quality is the largest confound
+                      in agent benchmarking, so it's held constant and
+                      published rather than hidden — full-file rewrites
+                      instead of diffs (models fail at exact line numbers),
+                      an oracle spec that never enters the agent's workspace,
+                      and up to three self-repair iterations against the
+                      baseline test suite before a run is scored.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <p class="section-eyebrow">The Engineering</p>
+              <h2 class="case-heading">
+                Resumable,<br /><em>reproducible, free.</em>
+              </h2>
+            </div>
+            <div class="col-lg-8">
+              <p class="body-text">
+                Every run is journaled append-only the instant it finishes, so
+                a killed process or a free-tier rate limit loses at most one
+                in-flight run — re-invoking the runner skips every
+                (task, model, condition, seed) tuple already recorded. Failures
+                are classified into a six-class drift taxonomy (D1–D5 cover
+                undocumented status codes, response-shape drift, dropped
+                validation, error-body drift, and auth regressions; D6 is
+                contract laundering itself). The entire benchmark — matrix
+                scheduler, sandboxed workspaces, model-agnostic provider
+                layer for local Ollama and cloud Gemini, Specmatic-based
+                contract scoring, CLI, and reporting — is covered by a
+                139-test suite and reproduces for
+                <strong>$0</strong>: free-tier and local inference only, no
+                paid API keys required to run a single line of it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section section-dark">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <p class="section-eyebrow">Status</p>
+              <h2 class="case-heading">
+                Pipeline validated,<br /><em>full run pending.</em>
+              </h2>
+            </div>
+            <div class="col-lg-8">
+              <p class="body-text">
+                The harness is built and end-to-end validated: an early pilot
+                run — Gemini 2.5 Flash against the bookstore task suite,
+                across all three conditions — is already in the journal
+                (12/12 tests passing, 12/12 contract conformance, zero
+                laundering detected on this small sample). That's pilot data
+                proving the pipeline is correct, not a benchmark result. The
+                full run matrix across the complete corpus, multiple model
+                families, and multiple seeds is the next milestone, feeding
+                directly into a methodology write-up of the first published
+                SCBR numbers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-nav">
+        <div class="container">
+          <div class="case-nav-inner">
+            <a href="../index.html#work" class="case-nav-link"
+              ><span class="case-nav-label">All Projects</span
+              ><span class="case-nav-title">← Back to Work</span></a
+            >
+            <a href="intellichat.html" class="case-nav-link case-nav-next"
+              ><span class="case-nav-label">Next Project</span
+              ><span class="case-nav-title">LLM-Service MCP →</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <span class="footer-logo">Ayon Aryan</span>
+          <p>&copy; 2026 · Engineered with precision.</p>
+          <div class="footer-links">
+            <a href="https://github.com/AYON-ARYAN" target="_blank"
+              >GitHub</a
+            ><a
+              href="https://www.linkedin.com/in/ayon-aryan-917078238/"
+              target="_blank"
+              >LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
