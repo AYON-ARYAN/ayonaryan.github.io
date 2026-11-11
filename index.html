@@ -121,6 +121,21 @@
         <div class="xp-list">
           <article class="xp-item reveal">
             <div class="xp-meta">
+              <span class="xp-dates">Feb — Sep 2026</span>
+              <span class="xp-loc">Bangalore</span>
+            </div>
+            <div class="xp-body">
+              <h3 class="xp-role">Software Developer Intern — <strong>KIBI Sports</strong></h3>
+              <ul class="xp-points">
+                <li>Built and shipped the <strong>AI Matchmaker</strong> — an LLM sponsorship engine matching brands to <strong>100,000+ verified sports assets</strong> across India, on Google Cloud Run + Cloud SQL.</li>
+                <li>Designed the 5-stage pipeline: rule-fit gating → Gemini embeddings (2-tier LRU + Postgres cache) → listwise re-ranking with Gemini 3.1 Pro → a 3-voter Flash panel that strips invented metrics → MMR diversity with a fame cap.</li>
+                <li>Added a self-improving feedback loop — cosine similarity between new and past briefs applies a bounded boost to previously shortlisted assets, cold-start safe.</li>
+                <li>Fixed production <strong>schema-drift outages</strong> across 9 mirrored tables with fail-closed deploys and a <code>/readyz</code> schema probe — <strong>17,172 failures/24h → 200 OK in 32s</strong>.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="xp-item reveal">
+            <div class="xp-meta">
               <span class="xp-dates">Jun — Aug 2025</span>
               <span class="xp-loc">Chicago · Remote</span>
             </div>
@@ -159,6 +174,22 @@
         <p class="section-eyebrow text-center reveal">Portfolio</p>
         <h2 class="section-title text-center reveal">Selected <em>systems.</em></h2>
         <div class="work-grid">
+          <a class="work-card reveal" href="work/visiontrack.html">
+            <img src="assets/img/portfolio/proj-visiontrack.png" alt="VisionTrack" loading="lazy" />
+            <div class="work-card-body">
+              <h3>VisionTrack</h3>
+              <p>Spatial memory for a room — detects and tracks every object, remembers each physical thing exactly once, and answers “where did I leave my phone?”</p>
+              <span class="work-tags">YOLO11 · ByteTrack · Flask · Nemotron</span>
+            </div>
+          </a>
+          <a class="work-card reveal" href="work/sanhita.html">
+            <img src="assets/img/portfolio/proj-sanhita.png" alt="Sanhita" loading="lazy" />
+            <div class="work-card-body">
+              <h3>Sanhita</h3>
+              <p>Fully local legal RAG for Indian law — hybrid dense + BM25 retrieval over a 121k-chunk corpus and a 32k-entity knowledge graph. No cloud API.</p>
+              <span class="work-tags">Ollama · Qwen · ChromaDB · NetworkX</span>
+            </div>
+          </a>
           <a class="work-card reveal" href="work/settledrift.html">
             <img src="assets/img/portfolio/proj-settledrift.png" alt="SettleDrift" loading="lazy" />
             <div class="work-card-body">

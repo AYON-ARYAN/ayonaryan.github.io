@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>VisionTrack — Ayon Aryan</title>
+    <meta
+      name="description"
+      content="Case study: spatial memory for a room — YOLO11 and ByteTrack remember every physical object once, with a photo, a region and a movement history."
+    />
+    <link href="../assets/img/profile/logo.png" rel="icon" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <a href="../index.html" class="nav-logo">Ayon Aryan</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#credentials">Credentials</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <a href="../assets/img/profile/MyCv.pdf" class="nav-cta" target="_blank"
+          >Résumé</a
+        ><button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <main>
+      <section class="case-hero">
+        <div class="container">
+          <a href="../index.html#work" class="back-link">← All Work</a>
+          <p class="section-eyebrow">Computer Vision · Spatial Memory</p>
+          <h1 class="case-title">VisionTrack</h1>
+          <p class="case-subtitle">
+            Spatial memory for a room. VisionTrack watches a video, recognises
+            every object in it, remembers each physical thing exactly once —
+            not once per frame — works out which part of the room it is in,
+            and records when it moves. Afterwards you can simply ask where you
+            left something.
+          </p>
+          <div class="case-meta">
+            <div class="case-meta-item">
+              <span class="case-meta-label">Role</span
+              ><span class="case-meta-value">Sole Engineer</span>
+            </div>
+            <div class="case-meta-item">
+              <span class="case-meta-label">Stack</span
+              ><span class="case-meta-value"
+                >YOLO11 · ByteTrack · Flask · FastAPI · NVIDIA Nemotron</span
+              >
+            </div>
+            <div class="case-meta-item">
+              <span class="case-meta-label">Repository</span
+              ><span class="case-meta-value"
+                ><a
+                  href="https://github.com/AYON-ARYAN/VisionTrack"
+                  target="_blank"
+                  >GitHub ↗</a
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="case-hero-img">
+        <img
+          src="../assets/img/portfolio/proj-visiontrack.png"
+          alt="VisionTrack — spatial memory for your room"
+        />
+      </div>
+
+      <section class="case-section">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <p class="section-eyebrow">The Problem</p>
+              <h2 class="case-heading">
+                Detection is per frame.<br /><em>Memory is per object.</em>
+              </h2>
+            </div>
+            <div class="col-lg-8">
+              <p class="body-text">
+                Run an object detector over a video and you get thousands of
+                boxes — the same laptop, found again and again, with no notion
+                that it is one laptop. Add a tracker and you get tracks, but a
+                track dies the moment the object leaves frame and a fresh one
+                is born when it returns. Neither gives you the thing a person
+                actually wants, which is a list of the objects in their room
+                and where each one currently is. VisionTrack closes that gap:
+                detection and tracking feed a persistent memory in which one
+                row means one physical object, however many times it has been
+                seen, lost and seen again.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section section-dark">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <p class="section-eyebrow">The Pipeline</p>
+              <h2 class="case-heading">
+                Four stages,<br /><em>one identity.</em>
+              </h2>
+            </div>
+            <div class="col-lg-8">
+              <div class="arch-list">
+                <div class="arch-item">
+                  <span class="expertise-number">A</span>
+                  <div>
+                    <h4>Detect — YOLO11</h4>
+                    <p>
+                      Ultralytics YOLO11 across the 80 COCO classes, with the
+                      device auto-selected: Apple GPU via
+                      <code>MPS</code>, NVIDIA via <code>CUDA</code>, or CPU.
+                    </p>
+                  </div>
+                </div>
+                <div class="arch-item">
+                  <span class="expertise-number">B</span>
+                  <div>
+                    <h4>Track — ByteTrack</h4>
+                    <p>
+                      ByteTrack keeps identity stable across consecutive
+                      frames, including through the low-confidence detections
+                      that naive trackers throw away.
+                    </p>
+                  </div>
+                </div>
+                <div class="arch-item">
+                  <span class="expertise-number">C</span>
+                  <div>
+                    <h4>Remember — one row per object</h4>
+                    <p>
+                      A re-identification pass collapses tracks back onto the
+                      same physical object when it leaves and re-enters view,
+                      so the memory holds objects, not sightings. Each one
+                      keeps a cropped photo, a first- and last-seen timestamp,
+                      an observation count and an average confidence.
+                    </p>
+                  </div>
+                </div>
+                <div class="arch-item">
+                  <span class="expertise-number">D</span>
+                  <div>
+                    <h4>Locate — regions and movement</h4>
+                    <p>
+                      The room is divided into named regions. Every object
+                      carries the region it sits in and a timeline of its
+                      moves between them, which is what turns "I saw a phone"
+                      into "the phone is in the keyboard area".
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <p class="section-eyebrow">The Interface</p>
+              <h2 class="case-heading">
+                Ask it<br /><em>in plain language.</em>
+              </h2>
+            </div>
+            <div class="col-lg-8">
+              <p class="body-text">
+                A Flask + Socket.IO UI streams the memory as it is built —
+                live analysis, an object gallery, a room map and a question
+                box — so you watch the room being understood rather than
+                waiting for a batch job. NVIDIA Nemotron answers free-form
+                questions over the stored memory, which means the numbers and
+                places in an answer come from the database, not from the
+                model's imagination.
+              </p>
+              <p class="body-text">
+                <em
+                  >"Where did I leave my phone?" → "I remember 2 cell phones.
+                  The most recent one (#4) was last seen in the keyboard area
+                  3 days ago; the other is there too."</em
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-nav">
+        <div class="container">
+          <div class="case-nav-inner">
+            <a href="../index.html#work" class="case-nav-link"
+              ><span class="case-nav-title">← Back to Work</span></a
+            >
+            <a href="sanhita.html" class="case-nav-link case-nav-next"
+              ><span class="case-nav-label">Next Project</span
+              ><span class="case-nav-title">Sanhita →</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <span class="footer-logo">Ayon Aryan</span>
+          <p>&copy; 2026 · Engineered with precision.</p>
+          <div class="footer-links">
+            <a href="https://github.com/AYON-ARYAN" target="_blank"
+              >GitHub</a
+            ><a
+              href="https://www.linkedin.com/in/ayon-aryan-917078238/"
+              target="_blank"
+              >LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
